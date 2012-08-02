@@ -1,10 +1,50 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="utf-8" />
-	<title>Untitled</title>
-</head>
-<body>
-
-</body>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Shop Inventory</title>
+        <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/jquery.mobile/1.1.0/jquery.mobile-1.1.0.min.css" />
+        <link rel="stylesheet" href="my.css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+        <script src="https://ajax.aspnetcdn.com/ajax/jquery.mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>
+        <script src="my.js"></script>
+    </head>
+    <body>
+        <!-- Home -->
+        <div data-role="page" id="page1">
+            <div data-theme="b" data-role="header">
+                <h1>Shop Inventory</h1>
+            </div>
+            <div data-role="content" style="padding: 15px">
+                <div style="width: 288px; height: 175px; position: relative; background-color: #fbfbfb; border: 1px solid #b8b8b8; text-align: center;">
+                	<h3 align="center" style="margin-left: 8px; margin-right: 8px;">Keep an inventory of your tools and accessories with you at all times.</h3>
+                	<img src="images/tools.png" alt="image" width="272px"/>
+                </div>
+                <div id="additemlink"><a href="additem.html" id="button">Click to Add First Tool</a></div>
+                <div data-role="fieldcontain">
+                    <fieldset data-role="controlgroup" data-mini="true">
+                        <label for="searchinput1">Search Inventory:</label>
+                        <input id="searchinput1" placeholder="" value="" type="search" />
+                    </fieldset>
+                </div>
+                <ul data-role="listview" data-divider-theme="b" data-inset="true">
+                    <li data-role="list-divider" role="heading">Browse By</li>
+                    <li data-theme="c"><a href="#page2" data-transition="fade">Hand Tools</a></li>
+                    <li data-theme="c"><a href="#page2" data-transition="fade">Power Tools</a></li>
+                    <li data-theme="c"><a href="#page2" data-transition="fade">Power Tool Accessories</a></li>
+                    <li data-theme="c"><a href="#page2" data-transition="fade">Hardware</a></li>
+                    <li data-theme="c"><a href="#page2" data-transition="fade">Lumber</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- Start of second page: #two -->
+		<div data-role="page" id="page2">
+		<div data-theme="b" data-role="header">
+			<a href="#page1" data-transition="fade" data-icon="back">Back</a>
+		    <h1>Shop Inventory</h1>
+	    </div>
+	    <h2 style="text-align: center;">Page Under Construction</h2>
+    </body>
 </html>
