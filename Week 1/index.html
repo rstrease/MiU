@@ -7,11 +7,9 @@
         <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/jquery.mobile/1.1.0/jquery.mobile-1.1.0.min.css" />
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
         <script src="https://ajax.aspnetcdn.com/ajax/jquery.mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>
-        <script src="my.js"></script>
     </head>
     <body>
-        <!-- Home -->
-        <div data-role="page" id="page1">
+        <div>
             <div data-theme="b" data-role="header">
                 <h1>Shop Inventory</h1>
             </div>
@@ -19,7 +17,9 @@
                 <div style="width: 100%; height: 175px; position: relative; background-color: #fbfbfb; border-radius: 8px; border: 1px solid #b8b8b8; text-align: center;">
                 	<p align="center">Keep an inventory of your tools and accessories with you at all times.</p>
                 	<img src="images/tools.png" alt="image" width="245px"/>
-                	<div id="additemlink"><a href="additem.html" id="button">Click to Add A Tool</a></div>
+                	<div id="additemlink" style="margin-top: 15px;">
+						<a href="additem.html" id="button" data-theme="c" data-transition="slide">Click to Add A Tool</a>
+					</div>
                 </div>
                 
                 <div data-role="fieldcontain">
@@ -30,21 +30,14 @@
                 </div>
                 <ul data-role="listview" data-divider-theme="b" data-inset="true" data-mini="true">
                     <li data-role="list-divider" role="heading">Browse Inventory By:</li>
-                    <li data-theme="c"><a href="#page2" data-transition="fade">Hand Tools</a></li>
-                    <li data-theme="c"><a href="#page2" data-transition="fade">Power Tools</a></li>
-                    <li data-theme="c"><a href="#page2" data-transition="fade">Power Tool Accessories</a></li>
-                    <li data-theme="c"><a href="#page2" data-transition="fade">Hardware</a></li>
-                    <li data-theme="c"><a href="#page2" data-transition="fade">Lumber</a></li>
+                    <li data-theme="c"><a href="handtools.html" data-transition="slide">Hand Tools</a></li>
+                    <li data-theme="c"><a href="handtools.html" data-transition="slide">Power Tools</a></li>
+                    <li data-theme="c"><a href="handtools.html" data-transition="slide">Power Tool Accessories</a></li>
+                    <li data-theme="c"><a href="handtools.html" data-transition="slide">Hardware</a></li>
+                    <li data-theme="c"><a href="handtools.html" data-transition="slide">Lumber</a></li>
                 </ul>
             </div>
         </div>
-        
-        <!-- Start of second page: #two -->
-		<div data-role="page" id="page2">
-		<div data-theme="b" data-role="header">
-			<a href="#page1" data-transition="fade" data-icon="back">Back</a>
-		    <h1>Shop Inventory</h1>
-	    </div>
-	    <h2 style="text-align: center;">Page Under Construction</h2>
     </body>
 </html>
+
