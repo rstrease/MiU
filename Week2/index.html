@@ -1,50 +1,69 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Shop Inventory</title>
-        <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/jquery.mobile/1.1.0/jquery.mobile-1.1.0.min.css" />
-        <link rel="stylesheet" href="my.css" />
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-        <script src="https://ajax.aspnetcdn.com/ajax/jquery.mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>
-        <script src="my.js"></script>
-    </head>
-    <body>
-        <!-- Home -->
-        <div data-role="page" id="page1">
-            <div data-theme="b" data-role="header">
+<!DOCTYPE html>  
+<html lang="en">
+<head>
+
+	<meta charset="utf-8">
+	
+	<title>Shop Inventory</title>
+	
+	<!--  Mobile viewport optimized: j.mp/bplateviewport -->
+	<meta name="HandheldFriendly" content="True">
+	<meta name="MobileOptimized" content="320"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<!-- Mobile IE needs ClearType for smoothing fonts -->
+	<meta http-equiv="cleartype" content="on">
+	
+	<!-- StyleSheets under here -->
+	<link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/jquery.mobile/1.1.0/jquery.mobile-1.1.0.min.css" />
+	<!--<link rel="stylesheet" href="css/style.css" />-->
+	
+	<!-- JavaScript is normally at the end of the body, except for Modernizr which enables HTML5 elements & feature detects -->
+	<script src="js/libs/modernizr.custom.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery.mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>
+
+</head>
+<body>
+        <div data-role="page" id="home">
+            <div data-theme="b" data-role="header" data-position="fixed">
                 <h1>Shop Inventory</h1>
             </div>
             <div data-role="content" style="padding: 15px">
-                <div style="width: 288px; height: 175px; position: relative; background-color: #fbfbfb; border: 1px solid #b8b8b8; text-align: center;">
-                	<h3 align="center" style="margin-left: 8px; margin-right: 8px;">Keep an inventory of your tools and accessories with you at all times.</h3>
-                	<img src="images/tools.png" alt="image" width="272px"/>
+                <div style="width: 100%; height: 190px; position: relative; background-color: #fbfbfb; border-radius: 8px; border: 1px solid #b8b8b8; text-align: center;">
+                	<p align="center">Keep an inventory of your tools and accessories with you at all times.</p>
+                	<img src="images/tools.png" alt="image" width="245px"/>
+                	<div id="additemlink" style="margin-top: 15px; margin-left: 25px; margin-right: 25px;">
+						<a href="additem.html" id="button" data-mini="true" data-theme="b" data-role="button" data-transition="slide">Click to Add A Tool</a>
+					</div>
                 </div>
-                <div id="additemlink"><a href="additem.html" id="button">Click to Add First Tool</a></div>
+                
                 <div data-role="fieldcontain">
                     <fieldset data-role="controlgroup" data-mini="true">
                         <label for="searchinput1"></label>
                         <input id="searchinput1" placeholder="" value="Search Inventory" type="search" />
                     </fieldset>
                 </div>
-                <ul data-role="listview" data-divider-theme="b" data-inset="true">
-                    <li data-role="list-divider" role="heading">Browse By</li>
-                    <li data-theme="c"><a href="#page2" data-transition="fade">Hand Tools</a></li>
-                    <li data-theme="c"><a href="#page2" data-transition="fade">Power Tools</a></li>
-                    <li data-theme="c"><a href="#page2" data-transition="fade">Power Tool Accessories</a></li>
-                    <li data-theme="c"><a href="#page2" data-transition="fade">Hardware</a></li>
-                    <li data-theme="c"><a href="#page2" data-transition="fade">Lumber</a></li>
+                <ul data-role="listview" data-divider-theme="b" data-inset="true" data-mini="true">
+                    <li data-role="list-divider" role="heading">Browse Inventory By:</li>
+                    <li data-theme="c"><a href="#browse" data-transition="slide">Hand Tools</a></li>
+                    <li data-theme="c"><a href="#browse" data-transition="slide">Power Tools</a></li>
+                    <li data-theme="c"><a href="#browse" data-transition="slide">Power Tool Accessories</a></li>
+                    <li data-theme="c"><a href="#browse" data-transition="slide">Hardware</a></li>
+                    <li data-theme="c"><a href="#browse" data-transition="slide">Lumber</a></li>
                 </ul>
             </div>
         </div>
         
-        <!-- Start of second page: #two -->
-		<div data-role="page" id="page2">
-		<div data-theme="b" data-role="header">
-			<a href="#page1" data-transition="fade" data-icon="back">Back</a>
-		    <h1>Shop Inventory</h1>
-	    </div>
-	    <h2 style="text-align: center;">Page Under Construction</h2>
-    </body>
+        <div data-role="page" id="browse" data-add-back-btn="true">
+        	<div data-theme="b" data-role="header">
+				<h1>Shop Inventory</h1>
+	    	</div>
+	    	<h2 style="text-align: center;">Page Under Construction</h2>
+        </div>
+	
+
+	<!-- JavaScript under here -->
+    <script type="text/javascript" src="js/main.js"></script>
+</body>
 </html>
