@@ -42,14 +42,15 @@
                 </div>
 				<div id="inputs">
 	                <form action="" method="POST" id="toolForm" style="margin-top: 8px;">
-	                    
+	                    <span>* Fields are required.</span>
+	                    <ul id="errors"></ul>
 	                        <fieldset data-role="controlgroup" data-mini="true">
-	                            <label for="name">Name:</label>
+	                            <label for="name">*Name:</label>
 	                            <input id="name" type="text" />
 	                        </fieldset>
 	                    
 	                    	<fieldset>
-	                        <label for="tooltype">Tool/Item Type:</label>
+	                        <label for="tooltype">*Tool/Item Type:</label>
 	                        <select id="select" data-mini="true" data-theme="c">
 	                            <option value="select">--Tool/Item Type--</option>
 	                            <option value="handtool">Hand Tool</option>
@@ -61,12 +62,12 @@
 	                        </fieldset>
 	                        
 	                        <fieldset data-role="controlgroup" data-mini="true" style="margin-top: 8px;">
-	                            <label for="make">Make:</label>
+	                            <label for="make">*Make:</label>
 	                            <input id="make" type="text" />
 	                        </fieldset>
 	                    
 	                        <fieldset data-role="controlgroup" data-mini="true">
-	                            <label for="mnumber">Model Number:</label>
+	                            <label for="mnumber">*Model Number:</label>
 	                            <input id="mnumber" type="text" />
 	                        </fieldset>
 	                    
