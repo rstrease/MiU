@@ -40,87 +40,88 @@
 	                    </div>
 	                </div>
                 </div>
-				
-                <form action="" method="POST" id="toolForm" style="margin-top: 8px;">
-                    
-                        <fieldset data-role="controlgroup" data-mini="true">
-                            <label for="name">Name:</label>
-                            <input id="name" type="text" />
-                        </fieldset>
-                    
-                    	<fieldset>
-                        <label for="tooltype">Tool/Item Type:</label>
-                        <select id="select" data-mini="true" data-theme="c">
-                            <option value="select">--Tool/Item Type--</option>
-                            <option value="handtool">Hand Tool</option>
-                            <option value="powertool">Power Tool</option>
-                            <option value="powertoolacc">Power Tool Accessory</option>
-                            <option value="hardware">Hardware</option>
-                            <option value="lumber">Lumber</option>
-                        </select>
-                        </fieldset>
-                        
-                        <fieldset data-role="controlgroup" data-mini="true" style="margin-top: 8px;">
-                            <label for="make">Make:</label>
-                            <input id="make" type="text" />
-                        </fieldset>
-                    
-                        <fieldset data-role="controlgroup" data-mini="true">
-                            <label for="mnumber">Model Number:</label>
-                            <input id="mnumber" type="text" />
-                        </fieldset>
-                    
-                        <fieldset data-role="controlgroup" data-mini="true">
-                            <label for="snumber">Serial Number:</label>
-                            <input id="snumber" type="text" />
-                        </fieldset>
-                    
-                        <fieldset data-role="controlgroup" data-mini="true">
-                            <label for="dpurchased">Date Purchased:</label>
-                            <input id="dpurchased" type="date" />
-                        </fieldset>
-                    
-                        <fieldset data-role="controlgroup" data-mini="true">
-                            <label for="wpurchased">Where Purchased:</label>
-                            <input id="wpurchased" type="text" />
-                        </fieldset>
-                    
-                        <fieldset data-role="controlgroup" data-mini="true">
-                            <label for="price">Price:</label>
-                            <input id="price" type="text" />
-                        </fieldset>
-                    
-                        <fieldset data-role="controlgroup" data-mini="true">
-                            <label for="ev">Estimated Value:</label>
-                            <input id="ev" type="text" />
-                        </fieldset>
-                    
-                        <fieldset data-role="controlgroup" data-type="vertical" data-mini="true">
-                            <legend>Purchase Type:</legend>
-                            <input data-theme="c" name="condition" id="new" value="New" type="radio" />
-                            <label for="new">New</label>
-                            <input data-theme="c" name="condition" id="used" value="Used" type="radio" />
-                            <label for="used">Used</label>
-                        </fieldset>
-                    
-                        <fieldset data-role="controlgroup" data-mini="true">
-                            <label for="qty">Quantity:</label>
-                            <input data-theme="c" type="range" id="qty" value="1" min="1" max="100" data-highlight="true" />
-                        </fieldset>
-                        
-                        <fieldset data-role="controlgroup" data-mini="true">
-                            <label for="dateadded">Date Added:</label>
-                            <input id="dateadded" type="date" />
-                        </fieldset>
-                    
-                    <div data-role="fieldcontain">
-                        <fieldset data-role="controlgroup">
-                            <label for="notes">Additional Notes:</label>
-                            <textarea id="notes"></textarea>
-                        </fieldset>
-                    </div>
-                    
-                </form>
+				<div id="inputs">
+	                <form action="" method="POST" id="toolForm" style="margin-top: 8px;">
+	                    
+	                        <fieldset data-role="controlgroup" data-mini="true">
+	                            <label for="name">Name:</label>
+	                            <input id="name" type="text" />
+	                        </fieldset>
+	                    
+	                    	<fieldset>
+	                        <label for="tooltype">Tool/Item Type:</label>
+	                        <select id="select" data-mini="true" data-theme="c">
+	                            <option value="select">--Tool/Item Type--</option>
+	                            <option value="handtool">Hand Tool</option>
+	                            <option value="powertool">Power Tool</option>
+	                            <option value="powertoolacc">Power Tool Accessory</option>
+	                            <option value="hardware">Hardware</option>
+	                            <option value="lumber">Lumber</option>
+	                        </select>
+	                        </fieldset>
+	                        
+	                        <fieldset data-role="controlgroup" data-mini="true" style="margin-top: 8px;">
+	                            <label for="make">Make:</label>
+	                            <input id="make" type="text" />
+	                        </fieldset>
+	                    
+	                        <fieldset data-role="controlgroup" data-mini="true">
+	                            <label for="mnumber">Model Number:</label>
+	                            <input id="mnumber" type="text" />
+	                        </fieldset>
+	                    
+	                        <fieldset data-role="controlgroup" data-mini="true">
+	                            <label for="snumber">Serial Number:</label>
+	                            <input id="snumber" type="text" />
+	                        </fieldset>
+	                    
+	                        <fieldset data-role="controlgroup" data-mini="true">
+	                            <label for="dpurchased">Date Purchased:</label>
+	                            <input id="dpurchased" type="date" />
+	                        </fieldset>
+	                    
+	                        <fieldset data-role="controlgroup" data-mini="true">
+	                            <label for="wpurchased">Where Purchased:</label>
+	                            <input id="wpurchased" type="text" />
+	                        </fieldset>
+	                    
+	                        <fieldset data-role="controlgroup" data-mini="true">
+	                            <label for="price">Price:</label>
+	                            <input id="price" type="text" />
+	                        </fieldset>
+	                    
+	                        <fieldset data-role="controlgroup" data-mini="true">
+	                            <label for="ev">Estimated Value:</label>
+	                            <input id="ev" type="text" />
+	                        </fieldset>
+	                    
+	                        <fieldset data-role="controlgroup" data-type="vertical" data-mini="true">
+	                            <legend>Purchase Type:</legend>
+	                            <input data-theme="c" name="condition" id="new" value="New" type="radio" />
+	                            <label for="new">New</label>
+	                            <input data-theme="c" name="condition" id="used" value="Used" type="radio" />
+	                            <label for="used">Used</label>
+	                        </fieldset>
+	                    
+	                        <fieldset data-role="controlgroup" data-mini="true">
+	                            <label for="qty">Quantity:</label>
+	                            <input data-theme="c" type="range" id="qty" value="1" min="1" max="100" data-highlight="true" />
+	                        </fieldset>
+	                        
+	                        <fieldset data-role="controlgroup" data-mini="true">
+	                            <label for="dateadded">Date Added:</label>
+	                            <input id="dateadded" type="date" />
+	                        </fieldset>
+	                    
+	                    <div data-role="fieldcontain">
+	                        <fieldset data-role="controlgroup">
+	                            <label for="notes">Additional Notes:</label>
+	                            <textarea id="notes"></textarea>
+	                        </fieldset>
+	                    </div>
+	                    
+	                </form>
+                </div>
                 <div id="footer" style="margin-top: 15px;">
                 <!--add item button-->
                 	<input type="submit" id="submit" data-theme="b" data-icon="plus" data-mini="yes" data-iconpos="left" value="Add Item To List" />
