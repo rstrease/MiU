@@ -1,11 +1,11 @@
-//project 1
+//project 2
 //Ryan Trease
 
 //Wait until DOM is loaded
 window.addEventListener("DOMContentLoaded", function(){
     
     //variables
-    var toolType = ["--Select Type--", "Hand Tool", "Power Tool", "Power Tool Accessory", "Hardware", "Lumber"];
+    //var toolType = ["--Select Type--", "Hand Tool", "Power Tool", "Power Tool Accessory", "Hardware", "Lumber"];
     var purchaseType;
     var errMsg = ge('errors');
    
@@ -15,12 +15,12 @@ window.addEventListener("DOMContentLoaded", function(){
         return element;
     }
     
-    //select field element and populate
+    /*//select field element and populate
     function chooseToolType(){
         var formTag = document.getElementsByTagName("fieldset");
         var select = ge('select');
         var makeSelect = document.createElement('select');
-        makeSelect.setAttribute("id", "groups");
+        makeSelect.setAttribute("id", "select");
         for(var i = 0, j=toolType.length; i<j; i++){
             var makeOption = document.createElement('option');
             var optText = toolType[i];
@@ -30,7 +30,7 @@ window.addEventListener("DOMContentLoaded", function(){
         }
         select.appendChild(makeSelect);
     }
-    chooseToolType();
+    chooseToolType();*/
     
     //find value of selected radio button
     function getSelected(){
@@ -49,6 +49,7 @@ window.addEventListener("DOMContentLoaded", function(){
                 ge('clear').style.display = "inline";
                 ge('display').style.display = "none";
                 ge('addnew').style.display = "inline";
+                ge('footer').style.display = "none";
                 break;
             case "off":
                 ge('inputs').style.display = "block";
@@ -73,7 +74,7 @@ window.addEventListener("DOMContentLoaded", function(){
         getSelected();
         var item = {};
             item.name = ["Name:", ge('name').value];
-            item.groups = ["Tool/Item Type: ", ge('groups').value];
+            item.select = ["Tool/Item Type: ", ge('select').value];
             item.make = ["Make: ", ge('make').value];
             item.mnumber = ["Model Number: ", ge('mnumber').value];
             item.snumber = ["Serial Number: ", ge('snumber').value];
@@ -118,7 +119,7 @@ window.addEventListener("DOMContentLoaded", function(){
 	            var makeSubList = document.createElement('div');
 	            makeSubList.setAttribute("id", "subUl");
 	            makeLi.appendChild(makeSubList);
-	            getImage(obj.groups[1], makeSubList);
+	            //getImage(obj.select[1], makeSubList);
 	            for(var n in obj){
 	                var makeSubLi = document.createElement('li');
 	                makeSubList.appendChild(makeSubLi);
@@ -175,7 +176,7 @@ window.addEventListener("DOMContentLoaded", function(){
     	toggleControls("off");
     	
     	ge('name').value = item.name[1];
-    	ge('groups').value = item.groups[1];
+    	ge('select').value = item.select[1];
     	ge('make').value = item.make[1];
     	ge('mnumber').value = item.mnumber[1];
     	ge('snumber').value = item.snumber[1];
@@ -234,16 +235,16 @@ window.addEventListener("DOMContentLoaded", function(){
     function validate(e){
     	//define elements to check
     	var getName = ge('name');
-    	var getGroup = ge('groups');
+    	var getGroup = ge('select');
     	var getMake = ge('make');
     	var getMnumber = ge('mnumber');
     	
     	//reset error messages
     	errMsg.innerHTML = "";
-    	getName.style.border = "1px solid #4B88B6";
-    	getGroup.style.border = "1px solid #4B88B6";
-    	getMake.style.border = "1px solid #4B88B6";
-    	getMnumber.style.border = "1px solid #4B88B6";
+    	getName.style.border = "1px solid #999999";
+    	getGroup.style.border = "1px solid #999999";
+    	getMake.style.border = "1px solid #999999";
+    	getMnumber.style.border = "1px solid #999999";
     	
     	//error messages
     	var errorMessageArray = [];
@@ -255,7 +256,7 @@ window.addEventListener("DOMContentLoaded", function(){
     	}
     	
     	//group error message
-    	if(getGroup.value === "--Select Type--"){
+    	if(getGroup.value === "--Select Tool/Item Type--"){
     		var groupError = "Please enter a tool type.";
     		getGroup.style.border = "1px solid red";
     		errorMessageArray.push(groupError);
