@@ -20,10 +20,13 @@
 	
 	<!-- JavaScript is normally at the end of the body, except for Modernizr which enables HTML5 elements & feature detects -->
 	<script src="js/libs/modernizr.custom.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<script src="https://ajax.aspnetcdn.com/ajax/jquery.mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>
+	
 
 </head>
 <body>
-        <div data-role="page" id="home">
+        <div data-role="page" id="home" data-theme="b">
             <div data-theme="b" data-role="header" data-position="fixed">
                 <h1>Shop Inventory</h1>
             </div>
@@ -32,38 +35,94 @@
                 	<p align="center">Keep an inventory of your tools and accessories with you at all times.</p>
                 	<img src="images/tools.png" alt="image" width="245px"/>
                 	<div id="additemlink" style="margin-top: 15px; margin-left: 25px; margin-right: 25px;">
-						<a href="additem.html" id="button" data-mini="true" data-theme="b" data-role="button" data-transition="slide">Click to Add A Tool</a>
+						<a href="additem.html" data-ajax="false" id="button" data-mini="true" data-theme="b" data-role="button" data-transition="slide">Click to Add A Tool</a>
 					</div>
                 </div>
                 
                 <div data-role="fieldcontain">
                     <fieldset data-role="controlgroup" data-mini="true">
                         <label for="searchinput1"></label>
-                        <input id="searchinput1" placeholder="" value="Search Inventory" type="search" />
+                        <input id="searchinput1" placeholder="Search Inventory" value="" type="search" data-theme="c" />
                     </fieldset>
                 </div>
                 <ul data-role="listview" data-divider-theme="b" data-inset="true" data-mini="true">
                     <li data-role="list-divider" role="heading">Browse Inventory By:</li>
+					<li data-theme="c"><a href="#all" data-transition="slide">All Tools</a></li>
                     <li data-theme="c"><a href="#browse" data-transition="slide">Hand Tools</a></li>
                     <li data-theme="c"><a href="#browse" data-transition="slide">Power Tools</a></li>
                     <li data-theme="c"><a href="#browse" data-transition="slide">Power Tool Accessories</a></li>
                     <li data-theme="c"><a href="#browse" data-transition="slide">Hardware</a></li>
                     <li data-theme="c"><a href="#browse" data-transition="slide">Lumber</a></li>
                 </ul>
+                <ul data-role="listview" data-divider-theme="b" data-inset="true" data-mini="true">
+                    <li data-role="list-divider" role="heading">App Extras:</li>
+					<li data-theme="c"><a href="#all" data-transition="slide">Info</a></li>
+                    <li data-theme="c"><a href="#browse" data-transition="slide">News Feed</a></li>
+                </ul>
             </div>
         </div>
-        
-        <div data-role="page" id="browse" data-add-back-btn="true">
-        	<div data-theme="b" data-role="header">
-				<h1>Shop Inventory</h1>
-	    	</div>
-	    	<h2 style="text-align: center;">Page Under Construction</h2>
+ 
+
+    <div data-role="page" data-theme="b" id="all">
+        <div data-position="fixed" data-role="header" data-theme="b">
+            <a href="#home" data-icon="back" data-rel="back">Back</a>
+            <h1>All Tools</h1>
         </div>
-	
-	<!-- JavaScript under here -->
-    <script type="text/javascript" src="js/main.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script src="https://ajax.aspnetcdn.com/ajax/jquery.mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>
-    
+
+        <div data-role="content" style="padding: 15px">
+            <ul data-divider-theme="b" data-filter="true" data-inset="true" data-mini="true" data-role="listview">
+                <li data-theme="c"><a data-transition="slide" href="#page1">Drill Press</a></li>
+                <li data-theme="c"><a data-transition="slide" href="#page1">Wrench</a></li>
+                <li data-theme="c"><a data-transition="slide" href="#page1">Miter Saw</a></li>
+                <li data-theme="c"><a data-transition="slide" href="#page1">Router Template Guide Set</a></li>
+                <li data-theme="c"><a data-transition="slide" href="#page1">Edge Guide</a></li>
+                <li data-theme="c"><a data-transition="slide" href="#page1">Biscuit Joiner</a></li>
+                <li data-theme="c"><a data-transition="slide" href="#page1">Router Kit</a></li>
+                <li data-theme="c"><a data-transition="slide" href="#page1">Hard Maple</a></li>
+                <li data-theme="c"><a data-transition="slide" href="#page1">Birdseye Maple</a></li>
+                <li data-theme="c"><a data-transition="slide" href="#page1">Mahogany</a></li>
+                <li data-theme="c"><a data-transition="slide" href="#page1">5 HP Motor 10 in. UNISAW with 52 in. BIESEMEYER Fence System</a></li>
+                <li data-theme="c"><a data-transition="slide" href="#page1">14 in. 1 HP Steel Frame Band Saw</a></li>
+                <li data-theme="c"><a data-transition="slide" href="#page1">13 in. Portable Thickness Planer</a></li>
+                <li data-theme="c"><a data-transition="slide" href="#page1">1 1/2 HP Motor Single Stage 1 Micron Dust Collector</a></li>
+                <li data-theme="c"><a data-transition="slide" href="#page1">SPAX General Woodworking Screw Assortment</a></li>
+                <li data-theme="c"><a data-transition="slide" href="#page1">#8 Black Oxide Plated Flat Head Screw Assortment</a></li>
+                <li data-theme="c"><a data-transition="slide" href="#page1">INCRA LS Positioner Super System</a></li>
+                <li data-theme="c"><a data-transition="slide" href="#page1">Oak</a></li>
+                <li data-theme="c"><a data-transition="slide" href="#page1">Quilted Maple</a></li>
+                <li data-theme="c"><a data-transition="slide" href="#page1">Bubinga</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div data-role="page" data-theme="b" id="page1">
+        <div data-role="header" data-theme="b">
+            <a href="#all" data-icon="back" data-rel="back">Back</a>
+            <h3>Drill Press</h3>
+        </div>
+
+        <div data-role="content" style="padding: 15px">
+            <div style="width: 100px; height: 100px; position: relative; background-color: #fbfbfb; border: 1px solid #b8b8b8;">
+            	<img alt="drill press" src="images/drillpress.png" style="width: 100px; height: 100px;">
+            </div>
+            <div id="items" style="display: block; list-style-type: none; margin-top: 15px;">
+            <div id="subUl">
+				<li>Name: Drill Press</li>
+				<li>Tool/Item Type: Power Tool</li>
+				<li>Make: Delta</li>
+				<li>Model Number: 11-550</li>
+				<li>Serial Number: 123456778</li>
+				<li>Date Purchased: 2012-7-24</li>
+				<li>Where Purchased: Lowes</li>
+				<li>Price: $199.99</li>
+				<li>Estimated Value: $199.99</li>
+				<li>Purchase Type: New</li>
+				<li>Quantity: 1</li>
+				<li>Date Added: 2012-7-24</li>
+				<li>Additional Notes: nse</li>
+			</div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
