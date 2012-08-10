@@ -6,7 +6,7 @@
 	
 	<title>Shop Inventory</title>
 	
-	<!--  Mobile viewport optimized: j.mp/bplateviewport -->
+	<!-- Mobile viewport optimized: j.mp/bplateviewport -->
 	<meta name="HandheldFriendly" content="True">
 	<meta name="MobileOptimized" content="320"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,7 +16,7 @@
 	
 	<!-- StyleSheets under here -->
 	<link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/jquery.mobile/1.1.0/jquery.mobile-1.1.0.min.css" />
-	<!--<link rel="stylesheet" href="css/style.css" />-->
+	<!-- <link rel="stylesheet" href="css/style.css" /> -->
 	
 	<!-- JavaScript is normally at the end of the body, except for Modernizr which enables HTML5 elements & feature detects -->
 	<script src="js/libs/modernizr.custom.min.js"></script>
@@ -48,16 +48,16 @@
                 <ul data-role="listview" data-divider-theme="b" data-inset="true" data-mini="true">
                     <li data-role="list-divider" role="heading">Browse Inventory By:</li>
 					<li data-theme="c"><a href="#all" data-transition="slide">All Tools</a></li>
-                    <li data-theme="c"><a href="#browse" data-transition="slide">Hand Tools</a></li>
-                    <li data-theme="c"><a href="#browse" data-transition="slide">Power Tools</a></li>
-                    <li data-theme="c"><a href="#browse" data-transition="slide">Power Tool Accessories</a></li>
-                    <li data-theme="c"><a href="#browse" data-transition="slide">Hardware</a></li>
-                    <li data-theme="c"><a href="#browse" data-transition="slide">Lumber</a></li>
+                    <li data-theme="c"><a href="#handtools" data-transition="slide">Hand Tools</a></li>
+                    <li data-theme="c"><a href="#ptools" data-transition="slide">Power Tools</a></li>
+                    <li data-theme="c"><a href="#ptoolacc" data-transition="slide">Power Tool Accessories</a></li>
+                    <li data-theme="c"><a href="#hardware" data-transition="slide">Hardware</a></li>
+                    <li data-theme="c"><a href="#lumber" data-transition="slide">Lumber</a></li>
                 </ul>
                 <ul data-role="listview" data-divider-theme="b" data-inset="true" data-mini="true">
                     <li data-role="list-divider" role="heading">App Extras:</li>
 					<li data-theme="c"><a href="#all" data-transition="slide">Info</a></li>
-                    <li data-theme="c"><a href="#browse" data-transition="slide">News Feed</a></li>
+                    <li data-theme="c"><a href="#rss" data-transition="slide">News Feed</a></li>
                 </ul>
             </div>
         </div>
@@ -74,26 +74,108 @@
                 <li data-theme="c"><a data-transition="slide" href="#dpress">Drill Press</a></li>
                 <li data-theme="c"><a data-transition="slide" href="#wrench">Wrench</a></li>
                 <li data-theme="c"><a data-transition="slide" href="#msaw">Miter Saw</a></li>
-                <li data-theme="c"><a data-transition="slide" href="#page1">Router Template Guide Set</a></li>
-                <li data-theme="c"><a data-transition="slide" href="#page1">Edge Guide</a></li>
-                <li data-theme="c"><a data-transition="slide" href="#page1">Biscuit Joiner</a></li>
-                <li data-theme="c"><a data-transition="slide" href="#page1">Router Kit</a></li>
-                <li data-theme="c"><a data-transition="slide" href="#page1">Hard Maple</a></li>
-                <li data-theme="c"><a data-transition="slide" href="#page1">Birdseye Maple</a></li>
-                <li data-theme="c"><a data-transition="slide" href="#page1">Mahogany</a></li>
-                <li data-theme="c"><a data-transition="slide" href="#page1">5 HP Motor 10 in. UNISAW with 52 in. BIESEMEYER Fence System</a></li>
-                <li data-theme="c"><a data-transition="slide" href="#page1">14 in. 1 HP Steel Frame Band Saw</a></li>
-                <li data-theme="c"><a data-transition="slide" href="#page1">13 in. Portable Thickness Planer</a></li>
-                <li data-theme="c"><a data-transition="slide" href="#page1">1 1/2 HP Motor Single Stage 1 Micron Dust Collector</a></li>
-                <li data-theme="c"><a data-transition="slide" href="#page1">SPAX General Woodworking Screw Assortment</a></li>
-                <li data-theme="c"><a data-transition="slide" href="#page1">#8 Black Oxide Plated Flat Head Screw Assortment</a></li>
-                <li data-theme="c"><a data-transition="slide" href="#page1">INCRA LS Positioner Super System</a></li>
-                <li data-theme="c"><a data-transition="slide" href="#page1">Oak</a></li>
-                <li data-theme="c"><a data-transition="slide" href="#page1">Quilted Maple</a></li>
-                <li data-theme="c"><a data-transition="slide" href="#page1">Bubinga</a></li>
+                <li data-theme="c"><a data-transition="slide" href="#rtemp">Router Template Guide Set</a></li>
+                <li data-theme="c"><a data-transition="slide" href="#edge">Edge Guide</a></li>
+                <li data-theme="c"><a data-transition="slide" href="#bjoiner">Biscuit Joiner</a></li>
+                <li data-theme="c"><a data-transition="slide" href="#rkit">Router Kit</a></li>
+                <li data-theme="c"><a data-transition="slide" href="#hmaple">Hard Maple</a></li>
+                <li data-theme="c"><a data-transition="slide" href="#bmaple">Birdseye Maple</a></li>
+                <li data-theme="c"><a data-transition="slide" href="#mahogany">Mahogany</a></li>
+                <li data-theme="c"><a data-transition="slide" href="#unisaw">5 HP Motor 10 in. UNISAW with 52 in. BIESEMEYER Fence System</a></li>
+                <li data-theme="c"><a data-transition="slide" href="#bandsaw">14 in. 1 HP Steel Frame Band Saw</a></li>
+                <li data-theme="c"><a data-transition="slide" href="#planer">13 in. Portable Thickness Planer</a></li>
+                <li data-theme="c"><a data-transition="slide" href="#dust">1 1/2 HP Motor Single Stage 1 Micron Dust Collector</a></li>
+                <li data-theme="c"><a data-transition="slide" href="#spax">SPAX General Woodworking Screw Assortment</a></li>
+                <li data-theme="c"><a data-transition="slide" href="#bscrews">#8 Black Oxide Plated Flat Head Screw Assortment</a></li>
+                <li data-theme="c"><a data-transition="slide" href="#incrals">INCRA LS Positioner Super System</a></li>
+                <li data-theme="c"><a data-transition="slide" href="#oak">Oak</a></li>
+                <li data-theme="c"><a data-transition="slide" href="#qmaple">Quilted Maple</a></li>
+                <li data-theme="c"><a data-transition="slide" href="#bubinga">Bubinga</a></li>
             </ul>
         </div>
     </div>
+    
+    <div data-role="page" data-theme="b" id="handtools">
+        <div data-position="fixed" data-role="header" data-theme="b">
+            <a href="#home" data-icon="back" data-rel="back">Back</a>
+            <h1>Hand Tools</h1>
+        </div>
+
+        <div data-role="content" style="padding: 15px">
+            <ul data-divider-theme="b" data-filter="true" data-inset="true" data-mini="true" data-role="listview">
+                <li data-theme="c"><a data-transition="slide" href="#wrench">Wrench</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div data-role="page" data-theme="b" id="ptools">
+        <div data-position="fixed" data-role="header" data-theme="b">
+            <a href="#home" data-icon="back" data-rel="back">Back</a>
+            <h1>Power Tools</h1>
+        </div>
+
+        <div data-role="content" style="padding: 15px">
+            <ul data-divider-theme="b" data-filter="true" data-inset="true" data-mini="true" data-role="listview">
+                <li data-theme="c"><a data-transition="slide" href="#dpress">Drill Press</a></li>
+                <li data-theme="c"><a data-transition="slide" href="#msaw">Miter Saw</a></li>
+                <li data-theme="c"><a data-transition="slide" href="#bjoiner">Biscuit Joiner</a></li>
+                <li data-theme="c"><a data-transition="slide" href="#rkit">Router Kit</a></li>
+                <li data-theme="c"><a data-transition="slide" href="#unisaw">5 HP Motor 10 in. UNISAW with 52 in. BIESEMEYER Fence System</a></li>
+                <li data-theme="c"><a data-transition="slide" href="#bandsaw">14 in. 1 HP Steel Frame Band Saw</a></li>
+                <li data-theme="c"><a data-transition="slide" href="#planer">13 in. Portable Thickness Planer</a></li>
+                <li data-theme="c"><a data-transition="slide" href="#dust">1 1/2 HP Motor Single Stage 1 Micron Dust Collector</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div data-role="page" data-theme="b" id="ptoolacc">
+        <div data-position="fixed" data-role="header" data-theme="b">
+            <a href="#home" data-icon="back" data-rel="back">Back</a>
+            <h1>Power Tool Accessories</h1>
+        </div>
+
+        <div data-role="content" style="padding: 15px">
+            <ul data-divider-theme="b" data-filter="true" data-inset="true" data-mini="true" data-role="listview">
+                <li data-theme="c"><a data-transition="slide" href="#rtemp">Router Template Guide Set</a></li>
+                <li data-theme="c"><a data-transition="slide" href="#edge">Edge Guide</a></li>
+                <li data-theme="c"><a data-transition="slide" href="#bscrews">#8 Black Oxide Plated Flat Head Screw Assortment</a></li>
+                <li data-theme="c"><a data-transition="slide" href="#incrals">INCRA LS Positioner Super System</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div data-role="page" data-theme="b" id="hardware">
+        <div data-position="fixed" data-role="header" data-theme="b">
+            <a href="#home" data-icon="back" data-rel="back">Back</a>
+            <h1>Hardware</h1>
+        </div>
+
+        <div data-role="content" style="padding: 15px">
+            <ul data-divider-theme="b" data-filter="true" data-inset="true" data-mini="true" data-role="listview">
+                <li data-theme="c"><a data-transition="slide" href="#spax">SPAX General Woodworking Screw Assortment</a></li>
+                <li data-theme="c"><a data-transition="slide" href="#bscrews">#8 Black Oxide Plated Flat Head Screw Assortment</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div data-role="page" data-theme="b" id="lumber">
+        <div data-position="fixed" data-role="header" data-theme="b">
+            <a href="#home" data-icon="back" data-rel="back">Back</a>
+            <h1>Lumber</h1>
+        </div>
+
+        <div data-role="content" style="padding: 15px">
+            <ul data-divider-theme="b" data-filter="true" data-inset="true" data-mini="true" data-role="listview">
+                <li data-theme="c"><a data-transition="slide" href="#hmaple">Hard Maple</a></li>
+                <li data-theme="c"><a data-transition="slide" href="#bmaple">Birdseye Maple</a></li>
+                <li data-theme="c"><a data-transition="slide" href="#mahogany">Mahogany</a></li>
+                <li data-theme="c"><a data-transition="slide" href="#oak">Oak</a></li>
+                <li data-theme="c"><a data-transition="slide" href="#qmaple">Quilted Maple</a></li>
+                <li data-theme="c"><a data-transition="slide" href="#bubinga">Bubinga</a></li>
+            </ul>
+        </div>
+    </div>
+
 
     <div data-role="page" data-theme="b" id="dpress">
         <div data-role="header" data-theme="b">
@@ -133,7 +215,7 @@
     
             <div data-role="content" style="padding: 15px">
                 <div style="width: 100px; height: 100px; position: relative; background-color: #fbfbfb; border: 1px solid #b8b8b8;">
-                	<img alt="drill press" src="images/wrench.png" style="width: 100px; height: 100px;">
+                	<img alt="wrench" src="images/wrench.png" style="width: 100px; height: 100px;">
                 </div>
                 <div id="items" style="display: block; list-style-type: none; margin-top: 15px;">
                 <div id="subUl">
@@ -163,7 +245,7 @@
 
         <div data-role="content" style="padding: 15px">
             <div style="width: 100px; height: 100px; position: relative; background-color: #fbfbfb; border: 1px solid #b8b8b8;">
-            	<img alt="drill press" src="images/mitersaw.png" style="width: 100px; height: 100px;">
+            	<img alt="miter saw" src="images/mitersaw.png" style="width: 100px; height: 100px;">
             </div>
             <div id="items" style="display: block; list-style-type: none; margin-top: 15px;">
             <div id="subUl">
@@ -184,6 +266,555 @@
             </div>
         </div>
     </div>        
+    
+	<div data-role="page" data-theme="b" id="rtemp">
+        <div data-role="header" data-theme="b">
+            <a href="#all" data-icon="back" data-rel="back">Back</a>
+            <h3>Router Template Guide Set</h3>
+        </div>
+
+        <div data-role="content" style="padding: 15px">
+            <div style="width: 100px; height: 100px; position: relative; background-color: #fbfbfb; border: 1px solid #b8b8b8;">
+            	<img alt="template" src="images/42000.png" style="width: 100px; height: 100px;">
+            </div>
+            <div id="items" style="display: block; list-style-type: none; margin-top: 15px;">
+            <div id="subUl">
+				<li>Name: Router Template Guide Set</li>
+				<li>Tool/Item Type: Power Tool Accessory</li>
+				<li>Make: Porter Cable</li>
+				<li>Model Number: 42000</li>
+				<li>Serial Number: 4200</li>
+				<li>Date Purchased: 2012-7-24</li>
+				<li>Where Purchased: Sears</li>
+				<li>Price: $19.99</li>
+				<li>Estimated Value: $19.99</li>
+				<li>Purchase Type: New</li>
+				<li>Quantity: 1</li>
+				<li>Date Added: 2012-7-24</li>
+				<li>Additional Notes: 9-piece set</li>
+			</div>
+            </div>
+        </div>
+    </div>
+    
+	<div data-role="page" data-theme="b" id="edge">
+        <div data-role="header" data-theme="b">
+            <a href="#all" data-icon="back" data-rel="back">Back</a>
+            <h3>Edge Guide</h3>
+        </div>
+
+        <div data-role="content" style="padding: 15px">
+            <div style="width: 100px; height: 100px; position: relative; background-color: #fbfbfb; border: 1px solid #b8b8b8;">
+            	<img alt="edge guide" src="images/42690.png" style="width: 100px; height: 100px;">
+            </div>
+            <div id="items" style="display: block; list-style-type: none; margin-top: 15px;">
+            <div id="subUl">
+				<li>Name: Edge Guide</li>
+				<li>Tool/Item Type: Power Tool Accessory</li>
+				<li>Make: Porter Cable</li>
+				<li>Model Number: 42690</li>
+				<li>Serial Number: 42690</li>
+				<li>Date Purchased: 2012-7-24</li>
+				<li>Where Purchased: ebay</li>
+				<li>Price: $14.99</li>
+				<li>Estimated Value: $19.99</li>
+				<li>Purchase Type: Used</li>
+				<li>Quantity: 1</li>
+				<li>Date Added: 2012-7-24</li>
+				<li>Additional Notes: nse</li>
+			</div>
+            </div>
+        </div>
+    </div>        
+    
+	<div data-role="page" data-theme="b" id="bjoiner">
+        <div data-role="header" data-theme="b">
+            <a href="#all" data-icon="back" data-rel="back">Back</a>
+            <h3>Biscuit Joiner</h3>
+        </div>
+
+        <div data-role="content" style="padding: 15px">
+            <div style="width: 100px; height: 100px; position: relative; background-color: #fbfbfb; border: 1px solid #b8b8b8;">
+            	<img alt="biscuit joiner" src="images/557.png" style="width: 100px; height: 100px;">
+            </div>
+            <div id="items" style="display: block; list-style-type: none; margin-top: 15px;">
+            <div id="subUl">
+				<li>Name: Biscuit Joiner</li>
+				<li>Tool/Item Type: Power Tool</li>
+				<li>Make: Porter Cable</li>
+				<li>Model Number: 557</li>
+				<li>Serial Number: 557</li>
+				<li>Date Purchased: 2012-7-24</li>
+				<li>Where Purchased: amazon.com</li>
+				<li>Price: $199.99</li>
+				<li>Estimated Value: $199.99</li>
+				<li>Purchase Type: New</li>
+				<li>Quantity: 1</li>
+				<li>Date Added: 2012-7-24</li>
+				<li>Additional Notes: nse</li>
+			</div>
+            </div>
+        </div>
+    </div>    
+
+	<div data-role="page" data-theme="b" id="rkit">
+        <div data-role="header" data-theme="b">
+            <a href="#all" data-icon="back" data-rel="back">Back</a>
+            <h3>Router Kit</h3>
+        </div>
+
+        <div data-role="content" style="padding: 15px">
+            <div style="width: 100px; height: 100px; position: relative; background-color: #fbfbfb; border: 1px solid #b8b8b8;">
+            	<img alt="router" src="images/895pk.png" style="width: 100px; height: 100px;">
+            </div>
+            <div id="items" style="display: block; list-style-type: none; margin-top: 15px;">
+            <div id="subUl">
+				<li>Name: Router Kit</li>
+				<li>Tool/Item Type: Power Tool</li>
+				<li>Make: Porter Cable</li>
+				<li>Model Number: 895PK</li>
+				<li>Serial Number: 895PK</li>
+				<li>Date Purchased: 2012-7-24</li>
+				<li>Where Purchased: Home Depot</li>
+				<li>Price: $199.99</li>
+				<li>Estimated Value: $199.99</li>
+				<li>Purchase Type: New</li>
+				<li>Quantity: 1</li>
+				<li>Date Added: 2012-7-24</li>
+				<li>Additional Notes: Includes Router Motor, Fixed Base, Plunge Base, Height adjuster, 1/4 & 1/2 collets, Sub-Base Centering Gauge, Collet wrench, Carrying case</li>
+			</div>
+            </div>
+        </div>
+    </div>
+
+	<div data-role="page" data-theme="b" id="hmaple">
+        <div data-role="header" data-theme="b">
+            <a href="#all" data-icon="back" data-rel="back">Back</a>
+            <h3>Hard Maple</h3>
+        </div>
+
+        <div data-role="content" style="padding: 15px">
+            <div style="width: 100px; height: 100px; position: relative; background-color: #fbfbfb; border: 1px solid #b8b8b8;">
+            	<img alt="hard maple" src="images/hardmaple.png" style="width: 100px; height: 100px;">
+            </div>
+            <div id="items" style="display: block; list-style-type: none; margin-top: 15px;">
+            <div id="subUl">
+				<li>Name: Hard Maple</li>
+				<li>Tool/Item Type: Lumber</li>
+				<li>Make: na</li>
+				<li>Model Number: na</li>
+				<li>Serial Number: na</li>
+				<li>Date Purchased: 2012-7-24</li>
+				<li>Where Purchased: Woodcraft</li>
+				<li>Price: $49.99</li>
+				<li>Estimated Value: $49.99</li>
+				<li>Purchase Type: New</li>
+				<li>Quantity: 3</li>
+				<li>Date Added: 2012-7-24</li>
+				<li>Additional Notes: 10 b.f.</li>
+			</div>
+            </div>
+        </div>
+    </div>
+
+	<div data-role="page" data-theme="b" id="bmaple">
+        <div data-role="header" data-theme="b">
+            <a href="#all" data-icon="back" data-rel="back">Back</a>
+            <h3>Birdseye Maple</h3>
+        </div>
+
+        <div data-role="content" style="padding: 15px">
+            <div style="width: 100px; height: 100px; position: relative; background-color: #fbfbfb; border: 1px solid #b8b8b8;">
+            	<img alt="birdseye maple" src="images/birdseyemaple.png" style="width: 100px; height: 100px;">
+            </div>
+            <div id="items" style="display: block; list-style-type: none; margin-top: 15px;">
+            <div id="subUl">
+				<li>Name: Birdseye Maple</li>
+				<li>Tool/Item Type: Lumber</li>
+				<li>Make: na</li>
+				<li>Model Number: na</li>
+				<li>Serial Number: na</li>
+				<li>Date Purchased: 2012-7-24</li>
+				<li>Where Purchased: Woodcraft</li>
+				<li>Price: $69.99</li>
+				<li>Estimated Value: $69.99</li>
+				<li>Purchase Type: New</li>
+				<li>Quantity: 3</li>
+				<li>Date Added: 2012-7-24</li>
+				<li>Additional Notes: 10 b.f.</li>
+			</div>
+            </div>
+        </div>
+    </div>
+
+	<div data-role="page" data-theme="b" id="mahogany">
+        <div data-role="header" data-theme="b">
+            <a href="#all" data-icon="back" data-rel="back">Back</a>
+            <h3>Mahogany</h3>
+        </div>
+
+        <div data-role="content" style="padding: 15px">
+            <div style="width: 100px; height: 100px; position: relative; background-color: #fbfbfb; border: 1px solid #b8b8b8;">
+            	<img alt="mahogany" src="images/mahogany.png" style="width: 100px; height: 100px;">
+            </div>
+            <div id="items" style="display: block; list-style-type: none; margin-top: 15px;">
+            <div id="subUl">
+				<li>Name: Mahogany</li>
+				<li>Tool/Item Type: Lumber</li>
+				<li>Make: na</li>
+				<li>Model Number: na</li>
+				<li>Serial Number: na</li>
+				<li>Date Purchased: 2012-7-24</li>
+				<li>Where Purchased: Woodcraft</li>
+				<li>Price: $39.99</li>
+				<li>Estimated Value: $39.99</li>
+				<li>Purchase Type: New</li>
+				<li>Quantity: 3</li>
+				<li>Date Added: 2012-7-24</li>
+				<li>Additional Notes: 5 b.f.</li>
+			</div>
+            </div>
+        </div>
+    </div>
+
+	<div data-role="page" data-theme="b" id="unisaw">
+        <div data-role="header" data-theme="b">
+            <a href="#all" data-icon="back" data-rel="back">Back</a>
+            <h3>10 in. UNISAW</h3>
+        </div>
+
+        <div data-role="content" style="padding: 15px">
+            <div style="width: 100px; height: 100px; position: relative; background-color: #fbfbfb; border: 1px solid #b8b8b8;">
+            	<img alt="unisaw" src="images/unisaw.png" style="width: 100px; height: 100px;">
+            </div>
+            <div id="items" style="display: block; list-style-type: none; margin-top: 15px;">
+            <div id="subUl">
+				<li>Name: 5 HP Motor 10 in. UNISAW with 52 in. BIESEMEYER Fence System</li>
+				<li>Tool/Item Type: Power Tool</li>
+				<li>Make: Delta</li>
+				<li>Model Number: 36-L552</li>
+				<li>Serial Number: 12345677</li>
+				<li>Date Purchased: 2012-7-24</li>
+				<li>Where Purchased: Lowes</li>
+				<li>Price: $899.99</li>
+				<li>Estimated Value: $899.99</li>
+				<li>Purchase Type: New</li>
+				<li>Quantity: 1</li>
+				<li>Date Added: 2012-7-24</li>
+				<li>Additional Notes: nse</li>
+			</div>
+            </div>
+        </div>
+    </div>
+
+	<div data-role="page" data-theme="b" id="bandsaw">
+        <div data-role="header" data-theme="b">
+            <a href="#all" data-icon="back" data-rel="back">Back</a>
+            <h3>14 in. Band Saw</h3>
+        </div>
+
+        <div data-role="content" style="padding: 15px">
+            <div style="width: 100px; height: 100px; position: relative; background-color: #fbfbfb; border: 1px solid #b8b8b8;">
+            	<img alt="band saw" src="images/28400.png" style="width: 100px; height: 100px;">
+            </div>
+            <div id="items" style="display: block; list-style-type: none; margin-top: 15px;">
+            <div id="subUl">
+				<li>Name: 14 in. 1 HP Steel Frame Band Saw</li>
+				<li>Tool/Item Type: Power Tool</li>
+				<li>Make: Delta</li>
+				<li>Model Number: 28-400</li>
+				<li>Serial Number: erfdwws</li>
+				<li>Date Purchased: 2012-7-24</li>
+				<li>Where Purchased: Woodcraft</li>
+				<li>Price: $299.99</li>
+				<li>Estimated Value: $299.99</li>
+				<li>Purchase Type: New</li>
+				<li>Quantity: 1</li>
+				<li>Date Added: 2012-7-24</li>
+				<li>Additional Notes: nse</li>
+			</div>
+            </div>
+        </div>
+    </div>
+
+	<div data-role="page" data-theme="b" id="planer">
+        <div data-role="header" data-theme="b">
+            <a href="#all" data-icon="back" data-rel="back">Back</a>
+            <h3>13 in. Planer</h3>
+        </div>
+
+        <div data-role="content" style="padding: 15px">
+            <div style="width: 100px; height: 100px; position: relative; background-color: #fbfbfb; border: 1px solid #b8b8b8;">
+            	<img alt="planer" src="images/planer.png" style="width: 100px; height: 100px;">
+            </div>
+            <div id="items" style="display: block; list-style-type: none; margin-top: 15px;">
+            <div id="subUl">
+				<li>Name: 13 in. Portable Thickness Planer</li>
+				<li>Tool/Item Type: Power Tool</li>
+				<li>Make: Delta</li>
+				<li>Model Number: 22-590</li>
+				<li>Serial Number: ls12141113</li>
+				<li>Date Purchased: 2012-7-24</li>
+				<li>Where Purchased: Lowes</li>
+				<li>Price: $199.99</li>
+				<li>Estimated Value: $199.99</li>
+				<li>Purchase Type: New</li>
+				<li>Quantity: 1</li>
+				<li>Date Added: 2012-7-24</li>
+				<li>Additional Notes:</li>
+			</div>
+            </div>
+        </div>
+    </div>
+
+	<div data-role="page" data-theme="b" id="dust">
+        <div data-role="header" data-theme="b">
+            <a href="#all" data-icon="back" data-rel="back">Back</a>
+            <h3>Dust Collector</h3>
+        </div>
+
+        <div data-role="content" style="padding: 15px">
+            <div style="width: 100px; height: 100px; position: relative; background-color: #fbfbfb; border: 1px solid #b8b8b8;">
+            	<img alt="dust collector" src="images/dust.png" style="width: 100px; height: 100px;">
+            </div>
+            <div id="items" style="display: block; list-style-type: none; margin-top: 15px;">
+            <div id="subUl">
+				<li>Name: 1 1/2 HP Motor Single Stage 1 Micron Dust Collector</li>
+				<li>Tool/Item Type: Power Tool</li>
+				<li>Make: Porter Cable</li>
+				<li>Model Number: 50-786</li>
+				<li>Serial Number: 4200</li>
+				<li>Date Purchased: 2012-7-24</li>
+				<li>Where Purchased: Woodcraft</li>
+				<li>Price: $199.99</li>
+				<li>Estimated Value: $199.99</li>
+				<li>Purchase Type: New</li>
+				<li>Quantity: 1</li>
+				<li>Date Added: 2012-7-24</li>
+				<li>Additional Notes:</li>
+			</div>
+            </div>
+        </div>
+    </div>
+
+	<div data-role="page" data-theme="b" id="spax">
+        <div data-role="header" data-theme="b">
+            <a href="#all" data-icon="back" data-rel="back">Back</a>
+            <h3>SPAX Screws</h3>
+        </div>
+
+        <div data-role="content" style="padding: 15px">
+            <div style="width: 100px; height: 100px; position: relative; background-color: #fbfbfb; border: 1px solid #b8b8b8;">
+            	<img alt="spax" src="images/spax.png" style="width: 100px; height: 100px;">
+            </div>
+            <div id="items" style="display: block; list-style-type: none; margin-top: 15px;">
+            <div id="subUl">
+				<li>Name: SPAX General Woodworking Screw Assortment</li>
+				<li>Tool/Item Type: Hardware</li>
+				<li>Make: Spax</li>
+				<li>Model Number: Spax-1</li>
+				<li>Serial Number: na</li>
+				<li>Date Purchased: 2012-7-24</li>
+				<li>Where Purchased: McFeely's.com</li>
+				<li>Price: $19.99</li>
+				<li>Estimated Value: $19.99</li>
+				<li>Purchase Type: new</li>
+				<li>Quantity: 75</li>
+				<li>Date Added: 2012-7-24</li>
+				<li>Additional Notes: #2</li>
+			</div>
+            </div>
+        </div>
+    </div>
+
+	<div data-role="page" data-theme="b" id="bscrews">
+        <div data-role="header" data-theme="b">
+            <a href="#all" data-icon="back" data-rel="back">Back</a>
+            <h3>#8 Black Screws</h3>
+        </div>
+
+        <div data-role="content" style="padding: 15px">
+            <div style="width: 100px; height: 100px; position: relative; background-color: #fbfbfb; border: 1px solid #b8b8b8;">
+            	<img alt="screw" src="images/bscrews.png" style="width: 100px; height: 100px;">
+            </div>
+            <div id="items" style="display: block; list-style-type: none; margin-top: 15px;">
+            <div id="subUl">
+				<li>Name: #8 Black Oxide Plated Flat Head Screw Assortment</li>
+				<li>Tool/Item Type: Hardware</li>
+				<li>Make: McFeely's</li>
+				<li>Model Number: 0800-FSK</li>
+				<li>Serial Number: 0800-FSK</li>
+				<li>Date Purchased: 2012-7-24</li>
+				<li>Where Purchased: McFeely's.com</li>
+				<li>Price: $19.99</li>
+				<li>Estimated Value: $19.99</li>
+				<li>Purchase Type: New</li>
+				<li>Quantity: 1</li>
+				<li>Date Added: 2012-7-24</li>
+				<li>Additional Notes: Black Oxide</li>
+			</div>
+            </div>
+        </div>
+    </div>
+
+	<div data-role="page" data-theme="b" id="incrals">
+        <div data-role="header" data-theme="b">
+            <a href="#all" data-icon="back" data-rel="back">Back</a>
+            <h3>INCRA LS Positioner</h3>
+        </div>
+
+        <div data-role="content" style="padding: 15px">
+            <div style="width: 100px; height: 100px; position: relative; background-color: #fbfbfb; border: 1px solid #b8b8b8;">
+            	<img alt="incra ls" src="images/incrals.png" style="width: 100px; height: 100px;">
+            </div>
+            <div id="items" style="display: block; list-style-type: none; margin-top: 15px;">
+            <div id="subUl">
+				<li>Name: INCRA LS Positioner Super System</li>
+				<li>Tool/Item Type: Power Tool Accessory</li>
+				<li>Make: Incra</li>
+				<li>Model Number: LS25WFNCSYS</li>
+				<li>Serial Number: LS25WFNCSYS</li>
+				<li>Date Purchased: 2012-7-24</li>
+				<li>Where Purchased: Woodpeckers.com</li>
+				<li>Price: $499.99</li>
+				<li>Estimated Value: $499.99</li>
+				<li>Purchase Type: New</li>
+				<li>Quantity: 1</li>
+				<li>Date Added: 2012-7-24</li>
+				<li>Additional Notes:</li>
+			</div>
+            </div>
+        </div>
+    </div>
+
+	<div data-role="page" data-theme="b" id="oak">
+        <div data-role="header" data-theme="b">
+            <a href="#all" data-icon="back" data-rel="back">Back</a>
+            <h3>Oak</h3>
+        </div>
+
+        <div data-role="content" style="padding: 15px">
+            <div style="width: 100px; height: 100px; position: relative; background-color: #fbfbfb; border: 1px solid #b8b8b8;">
+            	<img alt="oak" src="images/oak.png" style="width: 100px; height: 100px;">
+            </div>
+            <div id="items" style="display: block; list-style-type: none; margin-top: 15px;">
+            <div id="subUl">
+				<li>Name: Oak</li>
+				<li>Tool/Item Type: Lumber</li>
+				<li>Make: na</li>
+				<li>Model Number: na</li>
+				<li>Serial Number: na</li>
+				<li>Date Purchased: 2012-7-24</li>
+				<li>Where Purchased: Woodcraft</li>
+				<li>Price: $49.99</li>
+				<li>Estimated Value: $49.99</li>
+				<li>Purchase Type: New</li>
+				<li>Quantity: 5</li>
+				<li>Date Added: 2012-7-24</li>
+				<li>Additional Notes: nse</li>
+			</div>
+            </div>
+        </div>
+    </div>
+
+	<div data-role="page" data-theme="b" id="qmaple">
+        <div data-role="header" data-theme="b">
+            <a href="#all" data-icon="back" data-rel="back">Back</a>
+            <h3>Quilted Maple</h3>
+        </div>
+
+        <div data-role="content" style="padding: 15px">
+            <div style="width: 100px; height: 100px; position: relative; background-color: #fbfbfb; border: 1px solid #b8b8b8;">
+            	<img alt="quilted maple" src="images/qmaple.png" style="width: 100px; height: 100px;">
+            </div>
+            <div id="items" style="display: block; list-style-type: none; margin-top: 15px;">
+            <div id="subUl">
+				<li>Name: Quilted Maple</li>
+				<li>Tool/Item Type: Lumber</li>
+				<li>Make: na</li>
+				<li>Model Number: na</li>
+				<li>Serial Number: na</li>
+				<li>Date Purchased: 2012-7-24</li>
+				<li>Where Purchased: Woodcraft</li>
+				<li>Price: $69.99</li>
+				<li>Estimated Value: $69.99</li>
+				<li>Purchase Type: New</li>
+				<li>Quantity: 4</li>
+				<li>Date Added: 2012-7-24</li>
+				<li>Additional Notes: nse</li>
+			</div>
+            </div>
+        </div>
+    </div>
+
+	<div data-role="page" data-theme="b" id="bubinga">
+        <div data-role="header" data-theme="b">
+            <a href="#all" data-icon="back" data-rel="back">Back</a>
+            <h3>Bubinga</h3>
+        </div>
+
+        <div data-role="content" style="padding: 15px">
+            <div style="width: 100px; height: 100px; position: relative; background-color: #fbfbfb; border: 1px solid #b8b8b8;">
+            	<img alt="bubinga" src="images/bubinga.png" style="width: 100px; height: 100px;">
+            </div>
+            <div id="items" style="display: block; list-style-type: none; margin-top: 15px;">
+            <div id="subUl">
+				<li>Name: Bubinga</li>
+				<li>Tool/Item Type: Lumber</li>
+				<li>Make: na</li>
+				<li>Model Number: na</li>
+				<li>Serial Number: na</li>
+				<li>Date Purchased: 2012-7-24</li>
+				<li>Where Purchased: Woodcraft</li>
+				<li>Price: $99.99</li>
+				<li>Estimated Value: $99.99</li>
+				<li>Purchase Type: New</li>
+				<li>Quantity: 6</li>
+				<li>Date Added: 2012-7-24</li>
+				<li>Additional Notes: nse</li>
+			</div>
+            </div>
+        </div>
+    </div>
+    
+    <div data-role="page" data-theme="b" id="rss">
+        <div data-role="header" data-theme="b">
+            <a href="#all" data-icon="back" data-rel="back">Back</a>
+            <h3>RSS Feed</h3>
+        </div>
+			<!-- start feedwind code -->
+			<script type="text/javascript">
+			<!--
+			rssmikle_url="http://toolmonger.com/feed/";
+			rssmikle_frame_width="320";
+			rssmikle_frame_height="500";
+			rssmikle_target="_blank";
+			rssmikle_font="";
+			rssmikle_font_size="14";
+			rssmikle_border="on";
+			rssmikle_css_url="";
+			rssmikle_title="on";
+			rssmikle_title_bgcolor="#0066FF";
+			rssmikle_title_color="#FFFFFF";
+			rssmikle_title_bgimage="http://";
+			rssmikle_item_bgcolor="#FFFFFF";
+			rssmikle_item_bgimage="http://";
+			rssmikle_item_title_length="20";
+			rssmikle_item_title_color="#666666";
+			rssmikle_item_border_bottom="on";
+			rssmikle_item_description="on";
+			rssmikle_item_description_length="40";
+			rssmikle_item_description_color="#666666";
+			rssmikle_item_description_tag="off";
+			rssmikle_item_podcast="icon";
+			//-->
+			</script>
+			<script type="text/javascript" src="http://feed.mikle.com/js/rssmikle.js"></script>
+			<div style="font-size:10px; text-align:right;">
+			<a href="http://feed.mikle.com/en/" target="_blank" style="color:#CCCCCC;">FeedWind</a>
+			<!--Please display the above link in your web page according to Terms of Service.-->
+			
+    </div>
     
 </body>
 </html>
