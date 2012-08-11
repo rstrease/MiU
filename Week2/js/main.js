@@ -46,17 +46,18 @@ window.addEventListener("DOMContentLoaded", function(){
         switch (n) {
             case "on":
                 ge('inputs').style.display = "none";
+				ge('footer').style.display = "none";
                 ge('clear').style.display = "inline";
                 ge('display').style.display = "none";
                 ge('addnew').style.display = "inline";
-                ge('footer').style.display = "none";
                 break;
             case "off":
                 ge('inputs').style.display = "block";
-                ge('clear').style.display = "inline";
+				ge('clear').style.display = "inline";
                 ge('display').style.display = "inline";
                 ge('addnew').style.display = "none";
                 ge('items').style.display = "none";
+				ge('footer').style.display = "inline";
                 break;
             default:
             return false;
@@ -73,10 +74,10 @@ window.addEventListener("DOMContentLoaded", function(){
     	}
         getSelected();
         var item = {};
-            item.name = ["Name:", ge('name').value];
-            item.select = ["Tool/Item Type: ", ge('select').value];
-            item.make = ["Make: ", ge('make').value];
-            item.mnumber = ["Model Number: ", ge('mnumber').value];
+            item.name = ["*Name:", ge('name').value];
+            item.select = ["*Tool/Item Type: ", ge('select').value];
+            item.make = ["*Make: ", ge('make').value];
+            item.mnumber = ["*Model Number: ", ge('mnumber').value];
             item.snumber = ["Serial Number: ", ge('snumber').value];
             item.dpurchased = ["Date Purchased: ", ge('dpurchased').value];
             item.wpurchased = ["Where Purchased: ", ge('wpurchased').value];
@@ -90,7 +91,7 @@ window.addEventListener("DOMContentLoaded", function(){
         //save to local storage: use stringify to convert to string
         localStorage.setItem(id, JSON.stringify(item));
         alert("Your item was stored successfully!");
-        
+        window.location.reload();
     }
     
     //write data to display in browser
@@ -105,7 +106,7 @@ window.addEventListener("DOMContentLoaded", function(){
 	        var makeList = document.createElement('div');
 	        makeList.setAttribute("id", "ulList");
 	        makeDiv.appendChild(makeList);
-	        document.body.appendChild(makeDiv);
+	        additem.appendChild(makeDiv);
 	        ge('items').style.display = "block";
 	        for(var i=0, len=localStorage.length; i<len; i++){
 	            var makeLi = document.createElement('li');
@@ -119,13 +120,13 @@ window.addEventListener("DOMContentLoaded", function(){
 	            var makeSubList = document.createElement('div');
 	            makeSubList.setAttribute("id", "subUl");
 	            makeLi.appendChild(makeSubList);
-	            //getImage(obj.select[1], makeSubList);
+	            getImage(obj.select[1], makeSubList);
 	            for(var n in obj){
 	                var makeSubLi = document.createElement('li');
 	                makeSubList.appendChild(makeSubLi);
 	                var optSubText = obj[n][0]+" "+obj[n][1];
 	                makeSubLi.innerHTML = optSubText;
-	                makeSubList.appendChild(linksLi);
+	                makeLi.appendChild(linksLi);
             	}
 	            makeItemLinks(localStorage.key(i), linksLi); //create edit and delete buttons
             }
@@ -235,14 +236,14 @@ window.addEventListener("DOMContentLoaded", function(){
     function validate(e){
     	//define elements to check
     	var getName = ge('name');
-    	var getGroup = ge('select');
+    	var getSelect = ge('select');
     	var getMake = ge('make');
     	var getMnumber = ge('mnumber');
     	
     	//reset error messages
     	errMsg.innerHTML = "";
     	getName.style.border = "1px solid #999999";
-    	getGroup.style.border = "1px solid #999999";
+    	getSelect.style.border = "1px solid #999999";
     	getMake.style.border = "1px solid #999999";
     	getMnumber.style.border = "1px solid #999999";
     	
@@ -250,28 +251,28 @@ window.addEventListener("DOMContentLoaded", function(){
     	var errorMessageArray = [];
     	//name error message
     	if(getName.value === ""){
-    		var nameError = "Please enter an item name.";
+    		var nameError = "*Please enter a name.";
     		getName.style.border = "1px solid red";
     		errorMessageArray.push(nameError);
     	}
     	
     	//group error message
-    	if(getGroup.value === "--Select Tool/Item Type--"){
-    		var groupError = "Please enter a tool type.";
-    		getGroup.style.border = "1px solid red";
+    	if(getSelect.value === "type"){
+    		var groupError = "*Please enter a tool type.";
+    		getSelect.style.border = "1px solid red";
     		errorMessageArray.push(groupError);
     	}
     	
     	//make error message
     	if(getMake.value === ""){
-    		var makeError = "Please enter a tool make.";
+    		var makeError = "*Please enter a make.";
     		getMake.style.border = "1px solid red";
     		errorMessageArray.push(makeError);
     	}
     	
     	//model number error message
     	if(getMnumber.value === ""){
-    		var mnumberError = "Please enter a model number.";
+    		var mnumberError = "*Please enter a model number.";
     		getMnumber.style.border = "1px solid red";
     		errorMessageArray.push(mnumberError);
     	}
