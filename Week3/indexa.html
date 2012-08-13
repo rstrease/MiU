@@ -2,14 +2,11 @@
 <html lang="en">
 <head>
 
-<!-- This is my GOLD App -->
-<!-- Ryan Trease -->
-
 	<meta charset="utf-8">
 	
 	<title>Shop Inventory</title>
 	
-	<!-- Mobile viewport optimized: j.mp/bplateviewport -->
+	<!--  Mobile viewport optimized: j.mp/bplateviewport -->
 	<meta name="HandheldFriendly" content="True">
 	<meta name="MobileOptimized" content="320"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,13 +16,13 @@
 	
 	<!-- StyleSheets under here -->
 	<link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/jquery.mobile/1.1.0/jquery.mobile-1.1.0.min.css" />
-	<!-- <link rel="stylesheet" href="css/style.css" /> -->
+	<!--<link rel="stylesheet" href="css/style.css" />-->
 	
 	<!-- JavaScript is normally at the end of the body, except for Modernizr which enables HTML5 elements & feature detects -->
 	<script src="js/libs/modernizr.custom.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 	<script src="https://ajax.aspnetcdn.com/ajax/jquery.mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>
-	
+
 
 </head>
 <body>
@@ -41,139 +38,254 @@
 						<a href="additem.html" data-ajax="false" id="button" data-mini="true" data-theme="b" data-role="button" data-transition="slide">Click to Add A Tool</a>
 					</div>
                 </div>
-
-                <ul data-role="listview" data-divider-theme="b" data-inset="true" data-mini="true">
-                    <li data-role="list-divider" role="heading">Browse Inventory By:</li>
-					<li data-theme="c"><a href="#all" data-transition="slide">All Tools</a></li>
-                    <li data-theme="c"><a href="#handtools" data-transition="slide">Hand Tools</a></li>
-                    <li data-theme="c"><a href="#ptools" data-transition="slide">Power Tools</a></li>
-                    <li data-theme="c"><a href="#ptoolacc" data-transition="slide">Power Tool Accessories</a></li>
-                    <li data-theme="c"><a href="#hardware" data-transition="slide">Hardware</a></li>
-                    <li data-theme="c"><a href="#lumber" data-transition="slide">Lumber</a></li>
-                </ul>
-                <ul data-role="listview" data-divider-theme="b" data-inset="true" data-mini="true">
-                    <li data-role="list-divider" role="heading">App Extras:</li>
-					<li data-theme="c"><a href="#about" data-transition="slide">Info</a></li>
-                    <li data-theme="c"><a href="#rss" data-transition="slide">News Feed</a></li>
+                
+                <div data-role="collapsible-set" data-theme="c" data-content-theme="d" data-mini="true" style="margin-top: 20px;">
+            	<div data-role="collapsible" data-collapsed="true" >
+                <h3>
+                    All Tools
+                </h3>
+ 
+                <ul data-role="listview" data-filter="true" data-divider-theme="b" data-inset="true" data-mini="true">
+                    <li data-theme="c">
+                        <a href="#dpress" data-transition="slide">
+                            Drill Press
+                        </a>
+                    </li>
+                    <li data-theme="c">
+                        <a href="#wrench" data-transition="slide">
+                            Wrench
+                        </a>
+                    </li>
+                    <li data-theme="c">
+                        <a href="#msaw" data-transition="slide">
+                            Miter Saw
+                        </a>
+                    </li>
+                    <li data-theme="c">
+                        <a href="#rtemp" data-transition="slide">
+                            Router Template Guide Set
+                        </a>
+                    </li>
+                    <li data-theme="c">
+                        <a href="#edge" data-transition="slide">
+                            Edge Guide
+                        </a>
+                    </li>
+                    <li data-theme="c">
+                        <a href="#bjoiner" data-transition="slide">
+                            Biscuit Joiner
+                        </a>
+                    </li>
+                    <li data-theme="c">
+                        <a href="#rkit" data-transition="slide">
+                            Router Kit
+                        </a>
+                    </li>
+                    <li data-theme="c">
+                        <a href="#hmaple" data-transition="slide">
+                            Hard Maple
+                        </a>
+                    </li>
+                    <li data-theme="c">
+                        <a href="#bmaple" data-transition="slide">
+                            Birdseye Maple
+                        </a>
+                    </li>
+                    <li data-theme="c">
+                        <a href="#mahogany" data-transition="slide">
+                            Mahogany
+                        </a>
+                    </li>
+                    <li data-theme="c">
+                        <a href="#unisaw" data-transition="slide">
+                            5 HP Motor 10 in. UNISAW with 52 in. BIESEMEYER Fence System
+                        </a>
+                    </li>
+                    <li data-theme="c">
+                        <a href="#bandsaw" data-transition="slide">
+                            14 in. 1 HP Steel Frame Band Saw
+                        </a>
+                    </li>
+                    <li data-theme="c">
+                        <a href="#planer" data-transition="slide">
+                            13 in. Portable Thickness Planer
+                        </a>
+                    </li>
+                    <li data-theme="c">
+                        <a href="#dust" data-transition="slide">
+                            1 1/2 HP Motor Single Stage 1 Micron Dust Collector
+                        </a>
+                    </li>
+                    <li data-theme="c">
+                        <a href="#spax" data-transition="slide">
+                            SPAX General Woodworking Screw Assortment
+                        </a>
+                    </li>
+                    <li data-theme="c">
+                        <a href="#bscrews" data-transition="slide">
+                            #8 Black Oxide Plated Flat Head Screw Assortment
+                        </a>
+                    </li>
+                    <li data-theme="c">
+                        <a href="#incrals" data-transition="slide">
+                            INCRA LS Positioner Super System
+                        </a>
+                    </li>
+                    <li data-theme="c">
+                        <a href="#oak" data-transition="slide">
+                            Oak
+                        </a>
+                    </li>
+                    <li data-theme="c">
+                        <a href="#qmaple" data-transition="slide">
+                            Quilted Maple
+                        </a>
+                    </li>
+                    <li data-theme="c">
+                        <a href="#bubinga" data-transition="slide">
+                            Bubinga
+                        </a>
+                    </li>
                 </ul>
             </div>
+            <div data-role="collapsible" data-collapsed="true">
+                <h3>
+                    Hand Tools
+                </h3>
+                <ul data-role="listview" data-divider-theme="b" data-inset="true" data-mini="true">
+                    <li data-theme="c">
+                        <a href="#wrench" data-transition="slide">
+                            Wrench
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div data-role="collapsible" data-collapsed="true">
+                <h3>
+                    Power Tools
+                </h3>
+                <ul data-role="listview" data-divider-theme="b" data-inset="true" data-mini="true">
+                    <li data-theme="c">
+                        <a href="#dpress" data-transition="slide">
+                            Drill Press
+                        </a>
+                    </li>
+                    <li data-theme="c">
+                        <a href="#msaw" data-transition="slide">
+                            Miter Saw
+                        </a>
+                    </li>
+                    <li data-theme="c">
+                        <a href="#bjoiner" data-transition="slide">
+                            Biscuit Joiner
+                        </a>
+                    </li>
+                    <li data-theme="c">
+                        <a href="#rkit" data-transition="slide">
+                            Router Kit
+                        </a>
+                    </li>
+                    <li data-theme="c">
+                        <a href="#unisaw" data-transition="slide">
+                            5 HP Motor 10 in. UNISAW with 52 in. BIESEMEYER Fence System
+                        </a>
+                    </li>
+                    <li data-theme="c">
+                        <a href="#bandsaw" data-transition="slide">
+                            14 in. 1 HP Steel Frame Band Saw
+                        </a>
+                    </li>
+                    <li data-theme="c">
+                        <a href="#planer" data-transition="slide">
+                            13 in. Portable Thickness Planer
+                        </a>
+                    </li>
+                    <li data-theme="c">
+                        <a href="#dust" data-transition="slide">
+                            1 1/2 HP Motor Single Stage 1 Micron Dust Collector
+                        </a>
+                    </li>
+                </ul>
+            </div>
+			<div data-role="collapsible" data-collapsed="true">
+                <h3>
+                    Power Tool Accessories
+                </h3>
+                <ul data-role="listview" data-divider-theme="b" data-inset="true" data-mini="true">
+                    <li data-theme="c">
+                        <a href="#rtemp" data-transition="slide">
+                            Router Template Guide Set
+                        </a>
+                    </li>
+					<li data-theme="c">
+                        <a href="#edge" data-transition="slide">
+                            Edge Guide
+                        </a>
+                    </li>
+					<li data-theme="c">
+                        <a href="#incrals" data-transition="slide">
+                            INCRA LS Positioner Super System
+                        </a>
+                    </li>
+                </ul>
+            </div>
+			<div data-role="collapsible" data-collapsed="true">
+                <h3>
+                    Hardware
+                </h3>
+                <ul data-role="listview" data-divider-theme="b" data-inset="true" data-mini="true">
+                    <li data-theme="c">
+                        <a href="#spax" data-transition="slide">
+                            SPAX General Woodworking Screw Assortment
+                        </a>
+                    </li>
+					<li data-theme="c">
+                        <a href="#bscrews" data-transition="slide">
+                            #8 Black Oxide Plated Flat Head Screw Assortment
+                        </a>
+                    </li>
+				</ul>
+            </div>
+			<div data-role="collapsible" data-collapsed="true">
+                <h3>
+                    Lumber
+                </h3>
+                <ul data-role="listview" data-divider-theme="b" data-inset="true" data-mini="true">
+                    <li data-theme="c">
+                        <a href="#hmaple" data-transition="slide">
+                            Hard Maple
+                        </a>
+                    </li>
+					<li data-theme="c">
+                        <a href="#bmaple" data-transition="slide">
+                            Birdseye Maple
+                        </a>
+                    </li>
+					<li data-theme="c">
+                        <a href="#mahogany" data-transition="slide">
+                            Mahogany
+                        </a>
+                    </li>
+					<li data-theme="c">
+                        <a href="#oak" data-transition="slide">
+                            Oak
+                        </a>
+                    </li>
+					<li data-theme="c">
+                        <a href="#qmaple" data-transition="slide">
+                            Quilted Maple
+                        </a>
+                    </li>
+					<li data-theme="c">
+                        <a href="#bubinga" data-transition="slide">
+                            Bubinga
+                        </a>
+                    </li>
+				</ul>
+            </div>
         </div>
- 
-
-    <div data-role="page" data-theme="b" id="all">
-        <div data-position="fixed" data-role="header" data-theme="b">
-            <a href="#home" data-icon="back" data-rel="back">Back</a>
-            <h1>All Tools</h1>
+            </div>
         </div>
-
-        <div data-role="content" style="padding: 15px">
-            <ul data-divider-theme="b" data-filter="true" data-inset="true" data-mini="true" data-role="listview">
-                <li data-theme="c"><a data-transition="slide" href="#dpress">Drill Press</a></li>
-                <li data-theme="c"><a data-transition="slide" href="#wrench">Wrench</a></li>
-                <li data-theme="c"><a data-transition="slide" href="#msaw">Miter Saw</a></li>
-                <li data-theme="c"><a data-transition="slide" href="#rtemp">Router Template Guide Set</a></li>
-                <li data-theme="c"><a data-transition="slide" href="#edge">Edge Guide</a></li>
-                <li data-theme="c"><a data-transition="slide" href="#bjoiner">Biscuit Joiner</a></li>
-                <li data-theme="c"><a data-transition="slide" href="#rkit">Router Kit</a></li>
-                <li data-theme="c"><a data-transition="slide" href="#hmaple">Hard Maple</a></li>
-                <li data-theme="c"><a data-transition="slide" href="#bmaple">Birdseye Maple</a></li>
-                <li data-theme="c"><a data-transition="slide" href="#mahogany">Mahogany</a></li>
-                <li data-theme="c"><a data-transition="slide" href="#unisaw">5 HP Motor 10 in. UNISAW with 52 in. BIESEMEYER Fence System</a></li>
-                <li data-theme="c"><a data-transition="slide" href="#bandsaw">14 in. 1 HP Steel Frame Band Saw</a></li>
-                <li data-theme="c"><a data-transition="slide" href="#planer">13 in. Portable Thickness Planer</a></li>
-                <li data-theme="c"><a data-transition="slide" href="#dust">1 1/2 HP Motor Single Stage 1 Micron Dust Collector</a></li>
-                <li data-theme="c"><a data-transition="slide" href="#spax">SPAX General Woodworking Screw Assortment</a></li>
-                <li data-theme="c"><a data-transition="slide" href="#bscrews">#8 Black Oxide Plated Flat Head Screw Assortment</a></li>
-                <li data-theme="c"><a data-transition="slide" href="#incrals">INCRA LS Positioner Super System</a></li>
-                <li data-theme="c"><a data-transition="slide" href="#oak">Oak</a></li>
-                <li data-theme="c"><a data-transition="slide" href="#qmaple">Quilted Maple</a></li>
-                <li data-theme="c"><a data-transition="slide" href="#bubinga">Bubinga</a></li>
-            </ul>
-        </div>
-    </div>
-    
-    <div data-role="page" data-theme="b" id="handtools">
-        <div data-position="fixed" data-role="header" data-theme="b">
-            <a href="#home" data-icon="back" data-rel="back">Back</a>
-            <h1>Hand Tools</h1>
-        </div>
-
-        <div data-role="content" style="padding: 15px">
-            <ul data-divider-theme="b" data-filter="true" data-inset="true" data-mini="true" data-role="listview">
-                <li data-theme="c"><a data-transition="slide" href="#wrench">Wrench</a></li>
-            </ul>
-        </div>
-    </div>
-
-    <div data-role="page" data-theme="b" id="ptools">
-        <div data-position="fixed" data-role="header" data-theme="b">
-            <a href="#home" data-icon="back" data-rel="back">Back</a>
-            <h1>Power Tools</h1>
-        </div>
-
-        <div data-role="content" style="padding: 15px">
-            <ul data-divider-theme="b" data-filter="true" data-inset="true" data-mini="true" data-role="listview">
-                <li data-theme="c"><a data-transition="slide" href="#dpress">Drill Press</a></li>
-                <li data-theme="c"><a data-transition="slide" href="#msaw">Miter Saw</a></li>
-                <li data-theme="c"><a data-transition="slide" href="#bjoiner">Biscuit Joiner</a></li>
-                <li data-theme="c"><a data-transition="slide" href="#rkit">Router Kit</a></li>
-                <li data-theme="c"><a data-transition="slide" href="#unisaw">5 HP Motor 10 in. UNISAW with 52 in. BIESEMEYER Fence System</a></li>
-                <li data-theme="c"><a data-transition="slide" href="#bandsaw">14 in. 1 HP Steel Frame Band Saw</a></li>
-                <li data-theme="c"><a data-transition="slide" href="#planer">13 in. Portable Thickness Planer</a></li>
-                <li data-theme="c"><a data-transition="slide" href="#dust">1 1/2 HP Motor Single Stage 1 Micron Dust Collector</a></li>
-            </ul>
-        </div>
-    </div>
-
-    <div data-role="page" data-theme="b" id="ptoolacc">
-        <div data-position="fixed" data-role="header" data-theme="b">
-            <a href="#home" data-icon="back" data-rel="back">Back</a>
-            <h1>Power Tool Accessories</h1>
-        </div>
-
-        <div data-role="content" style="padding: 15px">
-            <ul data-divider-theme="b" data-filter="true" data-inset="true" data-mini="true" data-role="listview">
-                <li data-theme="c"><a data-transition="slide" href="#rtemp">Router Template Guide Set</a></li>
-                <li data-theme="c"><a data-transition="slide" href="#edge">Edge Guide</a></li>
-                <li data-theme="c"><a data-transition="slide" href="#bscrews">#8 Black Oxide Plated Flat Head Screw Assortment</a></li>
-                <li data-theme="c"><a data-transition="slide" href="#incrals">INCRA LS Positioner Super System</a></li>
-            </ul>
-        </div>
-    </div>
-
-    <div data-role="page" data-theme="b" id="hardware">
-        <div data-position="fixed" data-role="header" data-theme="b">
-            <a href="#home" data-icon="back" data-rel="back">Back</a>
-            <h1>Hardware</h1>
-        </div>
-
-        <div data-role="content" style="padding: 15px">
-            <ul data-divider-theme="b" data-filter="true" data-inset="true" data-mini="true" data-role="listview">
-                <li data-theme="c"><a data-transition="slide" href="#spax">SPAX General Woodworking Screw Assortment</a></li>
-                <li data-theme="c"><a data-transition="slide" href="#bscrews">#8 Black Oxide Plated Flat Head Screw Assortment</a></li>
-            </ul>
-        </div>
-    </div>
-
-    <div data-role="page" data-theme="b" id="lumber">
-        <div data-position="fixed" data-role="header" data-theme="b">
-            <a href="#home" data-icon="back" data-rel="back">Back</a>
-            <h1>Lumber</h1>
-        </div>
-
-        <div data-role="content" style="padding: 15px">
-            <ul data-divider-theme="b" data-filter="true" data-inset="true" data-mini="true" data-role="listview">
-                <li data-theme="c"><a data-transition="slide" href="#hmaple">Hard Maple</a></li>
-                <li data-theme="c"><a data-transition="slide" href="#bmaple">Birdseye Maple</a></li>
-                <li data-theme="c"><a data-transition="slide" href="#mahogany">Mahogany</a></li>
-                <li data-theme="c"><a data-transition="slide" href="#oak">Oak</a></li>
-                <li data-theme="c"><a data-transition="slide" href="#qmaple">Quilted Maple</a></li>
-                <li data-theme="c"><a data-transition="slide" href="#bubinga">Bubinga</a></li>
-            </ul>
-        </div>
-    </div>
-
-
     <div data-role="page" data-theme="b" id="dpress">
         <div data-role="header" data-theme="b">
             <a href="#all" data-icon="back" data-rel="back">Back</a>
@@ -774,26 +886,8 @@
         </div>
     </div>
     
-    <div data-role="page" data-theme="b" id="about">
-        <div data-role="header" data-theme="b">
-            <a href="#all" data-icon="back" data-rel="back">Back</a>
-            <h3>About</h3>
-        </div>
-        <div data-role="content" style="padding: 15px">
-            <a data-role="button" data-transition="fade" data-theme="b" href="https://github.com/rstrease/MiU.git">github Repository</a>
-            <a data-role="button" data-transition="fade" data-theme="b" href="https://github.com/rstrease/MiU/tree/gh-pages/Week2">github Live Link</a>
-        </div>	
-    </div>
-    
-    <div data-role="page" data-theme="b" id="rss">
-        <div data-role="header" data-theme="b">
-            <a href="#all" data-icon="back" data-rel="back">Back</a>
-            <h3>RSS Feed</h3>
-        </div>
-        <div data-role="content" style="padding: 15px">
-        	<script language="javascript" src="http://www.rssfeedconverter.com/services/rssconverter.php?format=&url=http%3A%2F%2Ftoolmonger.com%2Ffeed%2F"></script>
-    	</div>
-    </div>
-    
+		
+
+		
 </body>
 </html>
