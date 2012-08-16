@@ -74,33 +74,20 @@
 		</div>
 
 		<div data-role="content" style="padding: 15px">
-			<!-- <div class="ui-grid-a">
-				<div class="ui-block-a" id="clear">
-					<a data-icon="delete" data-iconpos="left" data-mini="true" data-role="button" data-theme="b" data-transition="slide" href="#">Clear Data</a>
-				</div>
-
-				<div class="ui-block-b" id="display">
-					<a data-icon="clear" data-iconpos="left" data-mini="true" data-role="button" data-theme="b" data-transition="slide" href="#">Display Data</a>
-				</div>
-
-				<div class="ui-block-b" id="addnew" style="display:none;">
-					<a  data-icon="plus" data-iconpos="left" data-mini="true" data-role="button" data-theme="b" data-transition="slide" href="#additem">New Item</a>
-				</div>
-			</div> -->
 
 			<div id="inputs">
 				<form action="" id="toolForm" method="post">
 					<div data-role="fieldcontain">
 						<fieldset data-mini="true" data-role="controlgroup">
-							<label for="name">Name:</label> 
+							<label for="name">*Name</label> 
 							<input class="required" id="name" name="name" type="text"/>
 						</fieldset>
 					</div>
 
 					<div data-role="fieldcontain">
-						<label for="selectType">Tool/Item Type:</label> 
-						<select name="selectType" id="selectType" data-native-menu="false" data-mini="true" data-theme="c" class="required">
-							<option data-placeholder="true" value>Please Select Type...</option>
+						<label for="selectType">*Tool/Item Type</label> 
+						<select name="selectType" id="selectType" data-mini="true" data-theme="c" class="required" value="Please Select Type...">
+							<option data-placeholder="selection" value>Please Select Type...</option>
 							<option value="handtool">Hand Tool</option>
 							<option value="powertool">Power Tool</option>
 							<option value="powertoolacc">Power Tool Accessory</option>
@@ -111,57 +98,57 @@
 
 					<div data-role="fieldcontain">
 						<fieldset data-mini="true" data-role="controlgroup">
-							<label for="make">Make:</label> 
+							<label for="make">*Make</label> 
 							<input class="required" id="make" name="make" type="text"/>
 						</fieldset>
 					</div>
 
 					<div data-role="fieldcontain">
 						<fieldset data-mini="true" data-role="controlgroup">
-							<label for="mnumber">Model Number:</label>
+							<label for="mnumber">*Model Number</label>
 							<input class="required" id="mnumber" name="mnumber" type="text"/>
 						</fieldset>
 					</div>
 
 					<div data-role="fieldcontain">
 						<fieldset data-mini="true" data-role="controlgroup">
-							<label for="snumber">Serial Number:</label>
+							<label for="snumber">Serial Number</label>
 							<input id="snumber" name="snumber" type="text"/>
 						</fieldset>
 					</div>
 
 					<div data-role="fieldcontain">
 						<fieldset data-mini="true" data-role="controlgroup">
-							<label for="dpurchased">Date Purchased:</label>
+							<label for="dpurchased">Date Purchased</label>
 							<input id="dpurchased" name="dpurchased" type="date"/>
 						</fieldset>
 					</div>
 
 					<div data-role="fieldcontain">
 						<fieldset data-mini="true" data-role="controlgroup">
-							<label for="wpurchased">Where Purchased:</label>
+							<label for="wpurchased">Where Purchased</label>
 							<input id="wpurchased" name="wpurchased" type="text"/>
 						</fieldset>
 					</div>
 
 					<div data-role="fieldcontain">
 						<fieldset data-mini="true" data-role="controlgroup">
-							<label for="price">Price:</label> 
+							<label for="price">Price</label> 
 							<input id="price" name="price" type="text"/>
 						</fieldset>
 					</div>
 
 					<div data-role="fieldcontain">
 						<fieldset data-mini="true" data-role="controlgroup">
-							<label for="ev">Estimated Value:</label>
+							<label for="ev">Estimated Value</label>
 							<input id="ev" name="ev" type="text"/>
 						</fieldset>
 					</div>
 
 					<div data-role="fieldcontain">
-						<fieldset data-mini="true" data-role="controlgroup">
-							<legend>Purchase Type:</legend>
-							<input data-theme="c" id="type-1" name="condition" type="radio" value="New"/>
+						<fieldset data-role="controlgroup" data-mini="true">
+							<legend>Purchase Type</legend>
+							<input data-theme="c" id="type-1" name="condition" type="radio" value="New" checked="checked"/>
 							<label for="type-1">New</label>
 							<input data-theme="c" id="type-2" name="condition" type="radio" value="Used"/> 
 							<label for="type-2">Used</label>
@@ -170,28 +157,28 @@
 
 					<div data-role="fieldcontain">
 						<fieldset data-mini="true" data-role="controlgroup">
-							<label for="qty">Quantity:</label>
+							<label for="qty">Quantity</label>
 							<input data-highlight="true" data-theme="c" id="qty" max="100" min="1" name="qty" type="range" value="1"/>
 						</fieldset>
 					</div>
 
 					<div data-role="fieldcontain">
 						<fieldset data-mini="true" data-role="controlgroup">
-							<label for="dateadded">Date Added:</label>
+							<label for="dateadded">Date Added</label>
 							<input id="dateadded" name="dateadded" type="date"/>
 						</fieldset>
 					</div>
 
 					<div data-role="fieldcontain">
 						<fieldset data-role="controlgroup">
-							<label for="notes">Additional Notes:</label> 
+							<label for="notes">Additional Notes</label> 
 							<textarea id="notes" name="notes"></textarea>
 						</fieldset>
 					</div>
 
 					<div data-role="fieldcontain">
-						<input data-icon="delete" data-iconpos="left" data-mini="yes" data-theme="a" type="reset" value="Reset Form"/> 
-						<input data-icon="plus" data-iconpos="left" data-mini="yes" data-theme="b" type="submit" value="Add Item To List"/>
+						<input id="submit" data-icon="plus" data-iconpos="left" data-mini="yes" data-theme="b" type="submit" value="Add Item To List"/>
+						<input id="reset" data-icon="delete" data-iconpos="left" data-mini="yes" data-theme="c" type="reset" value="Reset Form"/> 
 					</div>
 					
 					<a href="#toolformerrors" id="tferrorsLink" data-rel="dialog">Errors</a>
@@ -217,7 +204,7 @@
         </div>
 
         <div data-role="content">
-        	<ul>
+        	<ul id="missingfields">
         		<li>Test</li>
         	</ul>
         </div>
