@@ -1,3 +1,7 @@
+var parseToolForm = function(data){
+	console.log(data);
+};
+
 $(document).ready(function(){
 	var tform = $('#toolForm');
 	tform.validate({
