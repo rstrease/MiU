@@ -19,47 +19,195 @@
 	
 	<!-- StyleSheets under here -->
 	<link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/jquery.mobile/1.1.0/jquery.mobile-1.1.0.min.css" />
-	<!-- <link rel="stylesheet" href="css/style.css" /> -->
+	<link rel="stylesheet" href="css/style.css" />
 	
 	<!-- JavaScript is normally at the end of the body, except for Modernizr which enables HTML5 elements & feature detects -->
 	<script src="js/libs/modernizr.custom.min.js"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-	<script src="https://ajax.aspnetcdn.com/ajax/jquery.mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>
-	
-
 </head>
+
 <body>
-        <div data-role="page" id="home" data-theme="b">
-            <div data-theme="b" data-role="header" data-position="fixed">
-                <h1>Shop Inventory</h1>
-            </div>
-            <div data-role="content" style="padding: 15px">
-                <div style="width: 100%; height: 190px; position: relative; background-color: #fbfbfb; border-radius: 8px; border: 1px solid #b8b8b8; text-align: center;">
-                	<p align="center">Keep an inventory of your tools and accessories with you at all times.</p>
-                	<img src="images/tools.png" alt="image" width="245px"/>
-                	<div id="additemlink" style="margin-top: 15px; margin-left: 25px; margin-right: 25px;">
-						<a href="additem.html" data-ajax="false" id="button" data-mini="true" data-theme="b" data-role="button" data-transition="slide">Click to Add A Tool</a>
-					</div>
-                </div>
+    <div data-role="page" id="home" data-theme="b">
+        <div data-theme="b" data-role="header" data-position="fixed">
+            <h1>Shop Inventory</h1>
+        </div>
+        <div data-role="content" style="padding: 15px">
+            <div style="width: 100%; height: 190px; position: relative; background-color: #fbfbfb; border-radius: 8px; border: 1px solid #b8b8b8; text-align: center;">
+            <p align="center">Keep an inventory of your tools and accessories with you at all times.</p>
+            <img src="images/tools.png" alt="image" width="245px"/>
+				<div id="additemlink" style="margin-top: 15px; margin-left: 25px; margin-right: 25px;">
+					<a href="#additem" id="button" data-mini="true" data-theme="b" data-role="button" data-transition="slide">Click to Add A Tool</a>
+				</div>
+			</div>
 
                 <ul data-role="listview" data-divider-theme="b" data-inset="true" data-mini="true">
                     <li data-role="list-divider" role="heading">Browse Inventory By:</li>
-					<li data-theme="c"><a href="#all" data-transition="slide">All Tools</a></li>
-                    <li data-theme="c"><a href="#handtools" data-transition="slide">Hand Tools</a></li>
-                    <li data-theme="c"><a href="#ptools" data-transition="slide">Power Tools</a></li>
-                    <li data-theme="c"><a href="#ptoolacc" data-transition="slide">Power Tool Accessories</a></li>
-                    <li data-theme="c"><a href="#hardware" data-transition="slide">Hardware</a></li>
-                    <li data-theme="c"><a href="#lumber" data-transition="slide">Lumber</a></li>
+					<li data-theme="c"><a href="#all" data-transition="slide"><img src="images/alltools.png"/>All Tools</a></li>
+                    <li data-theme="c"><a href="#handtools" data-transition="slide"><img src="images/handtools.png"/>Hand Tools</a></li>
+                    <li data-theme="c"><a href="#ptools" data-transition="slide"><img src="images/powertools.png"/>Power Tools</a></li>
+                    <li data-theme="c"><a href="#ptoolacc" data-transition="slide"><img src="images/ptoolacc.png"/>Power Tool Accessories</a></li>
+                    <li data-theme="c"><a href="#hardware" data-transition="slide"><img src="images/hardware1.png"/>Hardware</a></li>
+                    <li data-theme="c"><a href="#lumber" data-transition="slide"><img src="images/lumber1.png"/>Lumber</a></li>
                 </ul>
                 <ul data-role="listview" data-divider-theme="b" data-inset="true" data-mini="true">
                     <li data-role="list-divider" role="heading">App Extras:</li>
-					<li data-theme="c"><a href="#about" data-transition="slide">Info</a></li>
-                    <li data-theme="c"><a href="#rss" data-transition="slide">News Feed</a></li>
+					<li data-theme="c"><a href="#about" data-transition="slide"><img src="images/info.png"/>Info</a></li>
+                    <li data-theme="c"><a href="#rss" data-transition="slide"><img src="images/feed.png"/>News Feed</a></li>
                 </ul>
+                <div data-role="footer" data-position="fixed" data-id="home">
+					<div data-role="navbar" data-iconpos="top">
+						<ul>
+							<li><a href="#home" data-theme="b" data-icon="home" data-transition="slide" class="ui-btn-active">Home</a></li>
+							<li><a href="#additem" data-theme="b" data-icon="plus" data-transition="slide">Add Item</a></li>
+							<li><a href="#rss" data-theme="b" data-icon="gear" data-transition="slide">RSS Feed</a></li>
+							<li><a href="#about" data-theme="b" data-icon="info" data-transition="slide">Info</a></li>
+						</ul>
+					</div>
+				</div>
             </div>
+            
         </div>
  
+	<div data-role="page" data-theme="b" id="additem">
+		<div data-position="fixed" data-role="header" data-theme="b">
+		<a href="#home" data-icon="back" data-rel="back">Back</a>
+			<h3>Add Item</h3>
+		</div>
 
+		<div data-role="content" style="padding: 15px">
+			<div class="ui-grid-a">
+				<div class="ui-block-a" id="clear">
+					<a data-icon="delete" data-iconpos="left" data-mini="true" data-role="button" data-theme="b" data-transition="slide" href="#">Clear Data</a>
+				</div>
+
+				<div class="ui-block-b" id="display">
+					<a data-icon="clear" data-iconpos="left" data-mini="true" data-role="button" data-theme="b" data-transition="slide" href="#">Display Data</a>
+				</div>
+
+				<div class="ui-block-b" id="addnew" style="display:none;">
+					<a  data-icon="plus" data-iconpos="left" data-mini="true" data-role="button" data-theme="b" data-transition="slide" href="#additem">New Item</a>
+				</div>
+			</div>
+
+			<div id="inputs">
+				<form action="" id="toolForm" method="post">
+					<div data-role="fieldcontain">
+						<fieldset data-mini="true" data-role="controlgroup">
+							<label for="name">Name:</label> 
+							<input class="required" id="name" name="name" type="text"/>
+						</fieldset>
+					</div>
+
+					<div data-role="fieldcontain">
+						<label for="selectType">Tool/Item Type:</label> 
+						<select name="selectType" id="selectType" data-native-menu="false" data-mini="true" data-theme="c" class="required">
+							<option data-placeholder="true" value>Please Select Type...</option>
+							<option value="handtool">Hand Tool</option>
+							<option value="powertool">Power Tool</option>
+							<option value="powertoolacc">Power Tool Accessory</option>
+							<option value="hardware">Hardware</option>
+							<option value="lumber">Lumber</option>
+						</select>
+					</div>
+
+					<div data-role="fieldcontain">
+						<fieldset data-mini="true" data-role="controlgroup">
+							<label for="make">Make:</label> 
+							<input class="required" id="make" name="make" type="text"/>
+						</fieldset>
+					</div>
+
+					<div data-role="fieldcontain">
+						<fieldset data-mini="true" data-role="controlgroup">
+							<label for="mnumber">Model Number:</label>
+							<input class="required" id="mnumber" name="mnumber" type="text"/>
+						</fieldset>
+					</div>
+
+					<div data-role="fieldcontain">
+						<fieldset data-mini="true" data-role="controlgroup">
+							<label for="snumber">Serial Number:</label>
+							<input id="snumber" name="snumber" type="text"/>
+						</fieldset>
+					</div>
+
+					<div data-role="fieldcontain">
+						<fieldset data-mini="true" data-role="controlgroup">
+							<label for="dpurchased">Date Purchased:</label>
+							<input id="dpurchased" name="dpurchased" type="date"/>
+						</fieldset>
+					</div>
+
+					<div data-role="fieldcontain">
+						<fieldset data-mini="true" data-role="controlgroup">
+							<label for="wpurchased">Where Purchased:</label>
+							<input id="wpurchased" name="wpurchased" type="text"/>
+						</fieldset>
+					</div>
+
+					<div data-role="fieldcontain">
+						<fieldset data-mini="true" data-role="controlgroup">
+							<label for="price">Price:</label> 
+							<input id="price" name="price" type="text"/>
+						</fieldset>
+					</div>
+
+					<div data-role="fieldcontain">
+						<fieldset data-mini="true" data-role="controlgroup">
+							<label for="ev">Estimated Value:</label>
+							<input id="ev" name="ev" type="text"/>
+						</fieldset>
+					</div>
+
+					<div data-role="fieldcontain">
+						<fieldset data-mini="true" data-role="controlgroup">
+							<legend>Purchase Type:</legend>
+							<input data-theme="c" id="type-1" name="condition" type="radio" value="New"/>
+							<label for="type-1">New</label>
+							<input data-theme="c" id="type-2" name="condition" type="radio" value="Used"/> 
+							<label for="type-2">Used</label>
+						</fieldset>
+					</div>
+
+					<div data-role="fieldcontain">
+						<fieldset data-mini="true" data-role="controlgroup">
+							<label for="qty">Quantity:</label>
+							<input data-highlight="true" data-theme="c" id="qty" max="100" min="1" name="qty" type="range" value="1"/>
+						</fieldset>
+					</div>
+
+					<div data-role="fieldcontain">
+						<fieldset data-mini="true" data-role="controlgroup">
+							<label for="dateadded">Date Added:</label>
+							<input id="dateadded" name="dateadded" type="date"/>
+						</fieldset>
+					</div>
+
+					<div data-role="fieldcontain">
+						<fieldset data-role="controlgroup">
+							<label for="notes">Additional Notes:</label> 
+							<textarea id="notes" name="notes"></textarea>
+						</fieldset>
+					</div>
+
+					<div data-role="fieldcontain">
+						<input data-icon="delete" data-iconpos="left" data-mini="yes" data-theme="a" type="reset" value="Reset Form"/> 
+						<input data-icon="plus" data-iconpos="left" data-mini="yes" data-theme="b" type="submit" value="Add Item To List"/>
+					</div>
+				</form>
+			</div>
+			<div data-role="footer" data-position="fixed" data-id="home">
+				<div data-role="navbar" data-iconpos="top">
+					<ul>
+						<li><a href="#home" data-theme="b" data-icon="home" data-transition="slide" class="ui-btn-active">Home</a></li>
+						<li><a href="#additem" data-theme="b" data-icon="plus" data-transition="slide">Add Item</a></li>
+						<li><a href="#rss" data-theme="b" data-icon="gear" data-transition="slide">RSS Feed</a></li>
+						<li><a href="#about" data-theme="b" data-icon="info" data-transition="slide">Info</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+ 
     <div data-role="page" data-theme="b" id="all">
         <div data-position="fixed" data-role="header" data-theme="b">
             <a href="#home" data-icon="back" data-rel="back">Back</a>
@@ -89,6 +237,16 @@
                 <li data-theme="c"><a data-transition="slide" href="#qmaple">Quilted Maple</a></li>
                 <li data-theme="c"><a data-transition="slide" href="#bubinga">Bubinga</a></li>
             </ul>
+			<div data-role="footer" data-position="fixed" data-id="home">
+					<div data-role="navbar" data-iconpos="top">
+						<ul>
+							<li><a href="#home" data-theme="b" data-icon="home" data-transition="slide" class="ui-btn-active">Home</a></li>
+							<li><a href="#additem" data-theme="b" data-icon="plus" data-transition="slide">Add Item</a></li>
+							<li><a href="#rss" data-theme="b" data-icon="gear" data-transition="slide">RSS Feed</a></li>
+							<li><a href="#about" data-theme="b" data-icon="info" data-transition="slide">Info</a></li>
+						</ul>
+					</div>
+				</div>
         </div>
     </div>
     
@@ -102,6 +260,16 @@
             <ul data-divider-theme="b" data-filter="true" data-inset="true" data-mini="true" data-role="listview">
                 <li data-theme="c"><a data-transition="slide" href="#wrench">Wrench</a></li>
             </ul>
+			<div data-role="footer" data-position="fixed" data-id="home">
+					<div data-role="navbar" data-iconpos="top">
+						<ul>
+							<li><a href="#home" data-theme="b" data-icon="home" data-transition="slide" class="ui-btn-active">Home</a></li>
+							<li><a href="#additem" data-theme="b" data-icon="plus" data-transition="slide">Add Item</a></li>
+							<li><a href="#rss" data-theme="b" data-icon="gear" data-transition="slide">RSS Feed</a></li>
+							<li><a href="#about" data-theme="b" data-icon="info" data-transition="slide">Info</a></li>
+						</ul>
+					</div>
+				</div>
         </div>
     </div>
 
@@ -122,6 +290,16 @@
                 <li data-theme="c"><a data-transition="slide" href="#planer">13 in. Portable Thickness Planer</a></li>
                 <li data-theme="c"><a data-transition="slide" href="#dust">1 1/2 HP Motor Single Stage 1 Micron Dust Collector</a></li>
             </ul>
+			<div data-role="footer" data-position="fixed" data-id="home">
+					<div data-role="navbar" data-iconpos="top">
+						<ul>
+							<li><a href="#home" data-theme="b" data-icon="home" data-transition="slide" class="ui-btn-active">Home</a></li>
+						<li><a href="#additem" data-theme="b" data-icon="plus" data-transition="slide">Add Item</a></li>
+						<li><a href="#rss" data-theme="b" data-icon="gear" data-transition="slide">RSS Feed</a></li>
+						<li><a href="#about" data-theme="b" data-icon="info" data-transition="slide">Info</a></li>
+						</ul>
+					</div>
+				</div>
         </div>
     </div>
 
@@ -135,9 +313,18 @@
             <ul data-divider-theme="b" data-filter="true" data-inset="true" data-mini="true" data-role="listview">
                 <li data-theme="c"><a data-transition="slide" href="#rtemp">Router Template Guide Set</a></li>
                 <li data-theme="c"><a data-transition="slide" href="#edge">Edge Guide</a></li>
-                <li data-theme="c"><a data-transition="slide" href="#bscrews">#8 Black Oxide Plated Flat Head Screw Assortment</a></li>
                 <li data-theme="c"><a data-transition="slide" href="#incrals">INCRA LS Positioner Super System</a></li>
             </ul>
+			<div data-role="footer" data-position="fixed" data-id="home">
+					<div data-role="navbar" data-iconpos="top">
+						<ul>
+							<li><a href="#home" data-theme="b" data-icon="home" data-transition="slide" class="ui-btn-active">Home</a></li>
+						<li><a href="#additem" data-theme="b" data-icon="plus" data-transition="slide">Add Item</a></li>
+						<li><a href="#rss" data-theme="b" data-icon="gear" data-transition="slide">RSS Feed</a></li>
+						<li><a href="#about" data-theme="b" data-icon="info" data-transition="slide">Info</a></li>
+						</ul>
+					</div>
+				</div>
         </div>
     </div>
 
@@ -152,6 +339,16 @@
                 <li data-theme="c"><a data-transition="slide" href="#spax">SPAX General Woodworking Screw Assortment</a></li>
                 <li data-theme="c"><a data-transition="slide" href="#bscrews">#8 Black Oxide Plated Flat Head Screw Assortment</a></li>
             </ul>
+			<div data-role="footer" data-position="fixed" data-id="home">
+					<div data-role="navbar" data-iconpos="top">
+						<ul>
+							<li><a href="#home" data-theme="b" data-icon="home" data-transition="slide" class="ui-btn-active">Home</a></li>
+						<li><a href="#additem" data-theme="b" data-icon="plus" data-transition="slide">Add Item</a></li>
+						<li><a href="#rss" data-theme="b" data-icon="gear" data-transition="slide">RSS Feed</a></li>
+						<li><a href="#about" data-theme="b" data-icon="info" data-transition="slide">Info</a></li>
+						</ul>
+					</div>
+				</div>
         </div>
     </div>
 
@@ -170,6 +367,16 @@
                 <li data-theme="c"><a data-transition="slide" href="#qmaple">Quilted Maple</a></li>
                 <li data-theme="c"><a data-transition="slide" href="#bubinga">Bubinga</a></li>
             </ul>
+			<div data-role="footer" data-position="fixed" data-id="home">
+					<div data-role="navbar" data-iconpos="top">
+						<ul>
+							<li><a href="#home" data-theme="b" data-icon="home" data-transition="slide" class="ui-btn-active">Home</a></li>
+						<li><a href="#additem" data-theme="b" data-icon="plus" data-transition="slide">Add Item</a></li>
+						<li><a href="#rss" data-theme="b" data-icon="gear" data-transition="slide">RSS Feed</a></li>
+						<li><a href="#about" data-theme="b" data-icon="info" data-transition="slide">Info</a></li>
+						</ul>
+					</div>
+				</div>
         </div>
     </div>
 
@@ -201,6 +408,16 @@
 				<li>Additional Notes: nse</li>
 			</div>
             </div>
+			<div data-role="footer" data-position="fixed" data-id="home">
+					<div data-role="navbar" data-iconpos="top">
+						<ul>
+							<li><a href="#home" data-theme="b" data-icon="home" data-transition="slide" class="ui-btn-active">Home</a></li>
+						<li><a href="#additem" data-theme="b" data-icon="plus" data-transition="slide">Add Item</a></li>
+						<li><a href="#rss" data-theme="b" data-icon="gear" data-transition="slide">RSS Feed</a></li>
+						<li><a href="#about" data-theme="b" data-icon="info" data-transition="slide">Info</a></li>
+						</ul>
+					</div>
+				</div>
         </div>
     </div>
     
@@ -231,6 +448,16 @@
     				<li>Additional Notes: nse</li>
     			</div>
                 </div>
+				<div data-role="footer" data-position="fixed" data-id="home">
+					<div data-role="navbar" data-iconpos="top">
+						<ul>
+							<li><a href="#home" data-theme="b" data-icon="home" data-transition="slide" class="ui-btn-active">Home</a></li>
+						<li><a href="#additem" data-theme="b" data-icon="plus" data-transition="slide">Add Item</a></li>
+						<li><a href="#rss" data-theme="b" data-icon="gear" data-transition="slide">RSS Feed</a></li>
+						<li><a href="#about" data-theme="b" data-icon="info" data-transition="slide">Info</a></li>
+						</ul>
+					</div>
+				</div>
             </div>
         </div>
 
@@ -261,6 +488,16 @@
 				<li>Additional Notes:</li>
 			</div>
             </div>
+			<div data-role="footer" data-position="fixed" data-id="home">
+					<div data-role="navbar" data-iconpos="top">
+						<ul>
+							<li><a href="#home" data-theme="b" data-icon="home" data-transition="slide" class="ui-btn-active">Home</a></li>
+						<li><a href="#additem" data-theme="b" data-icon="plus" data-transition="slide">Add Item</a></li>
+						<li><a href="#rss" data-theme="b" data-icon="gear" data-transition="slide">RSS Feed</a></li>
+						<li><a href="#about" data-theme="b" data-icon="info" data-transition="slide">Info</a></li>
+						</ul>
+					</div>
+				</div>
         </div>
     </div>        
     
@@ -291,6 +528,16 @@
 				<li>Additional Notes: 9-piece set</li>
 			</div>
             </div>
+			<div data-role="footer" data-position="fixed" data-id="home">
+					<div data-role="navbar" data-iconpos="top">
+						<ul>
+							<li><a href="#home" data-theme="b" data-icon="home" data-transition="slide" class="ui-btn-active">Home</a></li>
+						<li><a href="#additem" data-theme="b" data-icon="plus" data-transition="slide">Add Item</a></li>
+						<li><a href="#rss" data-theme="b" data-icon="gear" data-transition="slide">RSS Feed</a></li>
+						<li><a href="#about" data-theme="b" data-icon="info" data-transition="slide">Info</a></li>
+						</ul>
+					</div>
+				</div>
         </div>
     </div>
     
@@ -321,6 +568,16 @@
 				<li>Additional Notes: nse</li>
 			</div>
             </div>
+			<div data-role="footer" data-position="fixed" data-id="home">
+					<div data-role="navbar" data-iconpos="top">
+						<ul>
+							<li><a href="#home" data-theme="b" data-icon="home" data-transition="slide" class="ui-btn-active">Home</a></li>
+						<li><a href="#additem" data-theme="b" data-icon="plus" data-transition="slide">Add Item</a></li>
+						<li><a href="#rss" data-theme="b" data-icon="gear" data-transition="slide">RSS Feed</a></li>
+						<li><a href="#about" data-theme="b" data-icon="info" data-transition="slide">Info</a></li>
+						</ul>
+					</div>
+				</div>
         </div>
     </div>        
     
@@ -351,6 +608,16 @@
 				<li>Additional Notes: nse</li>
 			</div>
             </div>
+			<div data-role="footer" data-position="fixed" data-id="home">
+					<div data-role="navbar" data-iconpos="top">
+						<ul>
+							<li><a href="#home" data-theme="b" data-icon="home" data-transition="slide" class="ui-btn-active">Home</a></li>
+						<li><a href="#additem" data-theme="b" data-icon="plus" data-transition="slide">Add Item</a></li>
+						<li><a href="#rss" data-theme="b" data-icon="gear" data-transition="slide">RSS Feed</a></li>
+						<li><a href="#about" data-theme="b" data-icon="info" data-transition="slide">Info</a></li>
+						</ul>
+					</div>
+				</div>
         </div>
     </div>    
 
@@ -381,6 +648,16 @@
 				<li>Additional Notes: Includes Router Motor, Fixed Base, Plunge Base, Height adjuster, 1/4 & 1/2 collets, Sub-Base Centering Gauge, Collet wrench, Carrying case</li>
 			</div>
             </div>
+			<div data-role="footer" data-position="fixed" data-id="home">
+					<div data-role="navbar" data-iconpos="top">
+						<ul>
+							<li><a href="#home" data-theme="b" data-icon="home" data-transition="slide" class="ui-btn-active">Home</a></li>
+						<li><a href="#additem" data-theme="b" data-icon="plus" data-transition="slide">Add Item</a></li>
+						<li><a href="#rss" data-theme="b" data-icon="gear" data-transition="slide">RSS Feed</a></li>
+						<li><a href="#about" data-theme="b" data-icon="info" data-transition="slide">Info</a></li>
+						</ul>
+					</div>
+				</div>
         </div>
     </div>
 
@@ -411,6 +688,16 @@
 				<li>Additional Notes: 10 b.f.</li>
 			</div>
             </div>
+			<div data-role="footer" data-position="fixed" data-id="home">
+					<div data-role="navbar" data-iconpos="top">
+						<ul>
+							<li><a href="#home" data-theme="b" data-icon="home" data-transition="slide" class="ui-btn-active">Home</a></li>
+						<li><a href="#additem" data-theme="b" data-icon="plus" data-transition="slide">Add Item</a></li>
+						<li><a href="#rss" data-theme="b" data-icon="gear" data-transition="slide">RSS Feed</a></li>
+						<li><a href="#about" data-theme="b" data-icon="info" data-transition="slide">Info</a></li>
+						</ul>
+					</div>
+				</div>
         </div>
     </div>
 
@@ -441,6 +728,16 @@
 				<li>Additional Notes: 10 b.f.</li>
 			</div>
             </div>
+			<div data-role="footer" data-position="fixed" data-id="home">
+					<div data-role="navbar" data-iconpos="top">
+						<ul>
+							<li><a href="#home" data-theme="b" data-icon="home" data-transition="slide" class="ui-btn-active">Home</a></li>
+						<li><a href="#additem" data-theme="b" data-icon="plus" data-transition="slide">Add Item</a></li>
+						<li><a href="#rss" data-theme="b" data-icon="gear" data-transition="slide">RSS Feed</a></li>
+						<li><a href="#about" data-theme="b" data-icon="info" data-transition="slide">Info</a></li>
+						</ul>
+					</div>
+				</div>
         </div>
     </div>
 
@@ -471,6 +768,16 @@
 				<li>Additional Notes: 5 b.f.</li>
 			</div>
             </div>
+			<div data-role="footer" data-position="fixed" data-id="home">
+					<div data-role="navbar" data-iconpos="top">
+						<ul>
+							<li><a href="#home" data-theme="b" data-icon="home" data-transition="slide" class="ui-btn-active">Home</a></li>
+						<li><a href="#additem" data-theme="b" data-icon="plus" data-transition="slide">Add Item</a></li>
+						<li><a href="#rss" data-theme="b" data-icon="gear" data-transition="slide">RSS Feed</a></li>
+						<li><a href="#about" data-theme="b" data-icon="info" data-transition="slide">Info</a></li>
+						</ul>
+					</div>
+				</div>
         </div>
     </div>
 
@@ -501,6 +808,16 @@
 				<li>Additional Notes: nse</li>
 			</div>
             </div>
+			<div data-role="footer" data-position="fixed" data-id="home">
+					<div data-role="navbar" data-iconpos="top">
+						<ul>
+							<li><a href="#home" data-theme="b" data-icon="home" data-transition="slide" class="ui-btn-active">Home</a></li>
+						<li><a href="#additem" data-theme="b" data-icon="plus" data-transition="slide">Add Item</a></li>
+						<li><a href="#rss" data-theme="b" data-icon="gear" data-transition="slide">RSS Feed</a></li>
+						<li><a href="#about" data-theme="b" data-icon="info" data-transition="slide">Info</a></li>
+						</ul>
+					</div>
+				</div>
         </div>
     </div>
 
@@ -531,6 +848,16 @@
 				<li>Additional Notes: nse</li>
 			</div>
             </div>
+			<div data-role="footer" data-position="fixed" data-id="home">
+					<div data-role="navbar" data-iconpos="top">
+						<ul>
+							<li><a href="#home" data-theme="b" data-icon="home" data-transition="slide" class="ui-btn-active">Home</a></li>
+						<li><a href="#additem" data-theme="b" data-icon="plus" data-transition="slide">Add Item</a></li>
+						<li><a href="#rss" data-theme="b" data-icon="gear" data-transition="slide">RSS Feed</a></li>
+						<li><a href="#about" data-theme="b" data-icon="info" data-transition="slide">Info</a></li>
+						</ul>
+					</div>
+				</div>
         </div>
     </div>
 
@@ -561,6 +888,16 @@
 				<li>Additional Notes:</li>
 			</div>
             </div>
+			<div data-role="footer" data-position="fixed" data-id="home">
+					<div data-role="navbar" data-iconpos="top">
+						<ul>
+							<li><a href="#home" data-theme="b" data-icon="home" data-transition="slide" class="ui-btn-active">Home</a></li>
+						<li><a href="#additem" data-theme="b" data-icon="plus" data-transition="slide">Add Item</a></li>
+						<li><a href="#rss" data-theme="b" data-icon="gear" data-transition="slide">RSS Feed</a></li>
+						<li><a href="#about" data-theme="b" data-icon="info" data-transition="slide">Info</a></li>
+						</ul>
+					</div>
+				</div>
         </div>
     </div>
 
@@ -591,6 +928,16 @@
 				<li>Additional Notes:</li>
 			</div>
             </div>
+			<div data-role="footer" data-position="fixed" data-id="home">
+					<div data-role="navbar" data-iconpos="top">
+						<ul>
+							<li><a href="#home" data-theme="b" data-icon="home" data-transition="slide" class="ui-btn-active">Home</a></li>
+						<li><a href="#additem" data-theme="b" data-icon="plus" data-transition="slide">Add Item</a></li>
+						<li><a href="#rss" data-theme="b" data-icon="gear" data-transition="slide">RSS Feed</a></li>
+						<li><a href="#about" data-theme="b" data-icon="info" data-transition="slide">Info</a></li>
+						</ul>
+					</div>
+				</div>
         </div>
     </div>
 
@@ -620,7 +967,16 @@
 				<li>Date Added: 2012-7-24</li>
 				<li>Additional Notes: #2</li>
 			</div>
-            </div>
+            </div><div data-role="footer" data-position="fixed" data-id="home">
+					<div data-role="navbar" data-iconpos="top">
+						<ul>
+							<li><a href="#home" data-theme="b" data-icon="home" data-transition="slide" class="ui-btn-active">Home</a></li>
+						<li><a href="#additem" data-theme="b" data-icon="plus" data-transition="slide">Add Item</a></li>
+						<li><a href="#rss" data-theme="b" data-icon="gear" data-transition="slide">RSS Feed</a></li>
+						<li><a href="#about" data-theme="b" data-icon="info" data-transition="slide">Info</a></li>
+						</ul>
+					</div>
+				</div>
         </div>
     </div>
 
@@ -651,6 +1007,16 @@
 				<li>Additional Notes: Black Oxide</li>
 			</div>
             </div>
+			<div data-role="footer" data-position="fixed" data-id="home">
+					<div data-role="navbar" data-iconpos="top">
+						<ul>
+							<li><a href="#home" data-theme="b" data-icon="home" data-transition="slide" class="ui-btn-active">Home</a></li>
+						<li><a href="#additem" data-theme="b" data-icon="plus" data-transition="slide">Add Item</a></li>
+						<li><a href="#rss" data-theme="b" data-icon="gear" data-transition="slide">RSS Feed</a></li>
+						<li><a href="#about" data-theme="b" data-icon="info" data-transition="slide">Info</a></li>
+						</ul>
+					</div>
+				</div>
         </div>
     </div>
 
@@ -681,6 +1047,16 @@
 				<li>Additional Notes:</li>
 			</div>
             </div>
+			<div data-role="footer" data-position="fixed" data-id="home">
+					<div data-role="navbar" data-iconpos="top">
+						<ul>
+							<li><a href="#home" data-theme="b" data-icon="home" data-transition="slide" class="ui-btn-active">Home</a></li>
+						<li><a href="#additem" data-theme="b" data-icon="plus" data-transition="slide">Add Item</a></li>
+						<li><a href="#rss" data-theme="b" data-icon="gear" data-transition="slide">RSS Feed</a></li>
+						<li><a href="#about" data-theme="b" data-icon="info" data-transition="slide">Info</a></li>
+						</ul>
+					</div>
+				</div>
         </div>
     </div>
 
@@ -711,6 +1087,16 @@
 				<li>Additional Notes: nse</li>
 			</div>
             </div>
+			<div data-role="footer" data-position="fixed" data-id="home">
+					<div data-role="navbar" data-iconpos="top">
+						<ul>
+							<li><a href="#home" data-theme="b" data-icon="home" data-transition="slide" class="ui-btn-active">Home</a></li>
+						<li><a href="#additem" data-theme="b" data-icon="plus" data-transition="slide">Add Item</a></li>
+						<li><a href="#rss" data-theme="b" data-icon="gear" data-transition="slide">RSS Feed</a></li>
+						<li><a href="#about" data-theme="b" data-icon="info" data-transition="slide">Info</a></li>
+						</ul>
+					</div>
+				</div>
         </div>
     </div>
 
@@ -741,6 +1127,16 @@
 				<li>Additional Notes: nse</li>
 			</div>
             </div>
+			<div data-role="footer" data-position="fixed" data-id="home">
+					<div data-role="navbar" data-iconpos="top">
+						<ul>
+							<li><a href="#home" data-theme="b" data-icon="home" data-transition="slide" class="ui-btn-active">Home</a></li>
+						<li><a href="#additem" data-theme="b" data-icon="plus" data-transition="slide">Add Item</a></li>
+						<li><a href="#rss" data-theme="b" data-icon="gear" data-transition="slide">RSS Feed</a></li>
+						<li><a href="#about" data-theme="b" data-icon="info" data-transition="slide">Info</a></li>
+						</ul>
+					</div>
+				</div>
         </div>
     </div>
 
@@ -771,6 +1167,16 @@
 				<li>Additional Notes: nse</li>
 			</div>
             </div>
+			<div data-role="footer" data-position="fixed" data-id="home">
+					<div data-role="navbar" data-iconpos="top">
+						<ul>
+							<li><a href="#home" data-theme="b" data-icon="home" data-transition="slide" class="ui-btn-active">Home</a></li>
+						<li><a href="#additem" data-theme="b" data-icon="plus" data-transition="slide">Add Item</a></li>
+						<li><a href="#rss" data-theme="b" data-icon="gear" data-transition="slide">RSS Feed</a></li>
+						<li><a href="#about" data-theme="b" data-icon="info" data-transition="slide">Info</a></li>
+						</ul>
+					</div>
+				</div>
         </div>
     </div>
     
@@ -780,9 +1186,19 @@
             <h3>About</h3>
         </div>
         <div data-role="content" style="padding: 15px">
-            <a data-role="button" data-transition="fade" data-theme="b" href="https://github.com/rstrease/MiU.git">github Repository</a>
-            <a data-role="button" data-transition="fade" data-theme="b" href="https://github.com/rstrease/MiU/tree/gh-pages/Week2">github Live Link</a>
-        </div>	
+            <a data-role="button" data-mini="true" data-transition="fade" data-theme="b" href="https://github.com/rstrease/MiU.git">github Repository</a>
+            <a data-role="button" data-mini="true" data-transition="fade" data-theme="b" href="https://github.com/rstrease/MiU/tree/gh-pages/Week2">github Live Link</a>
+        </div>
+<div data-role="footer" data-position="fixed" data-id="home">
+					<div data-role="navbar" data-iconpos="top">
+						<ul>
+							<li><a href="#home" data-theme="b" data-icon="home" data-transition="slide" class="ui-btn-active">Home</a></li>
+						<li><a href="#additem" data-theme="b" data-icon="plus" data-transition="slide">Add Item</a></li>
+						<li><a href="#rss" data-theme="b" data-icon="gear" data-transition="slide">RSS Feed</a></li>
+						<li><a href="#about" data-theme="b" data-icon="info" data-transition="slide">Info</a></li>
+						</ul>
+					</div>
+				</div>		
     </div>
     
     <div data-role="page" data-theme="b" id="rss">
@@ -791,9 +1207,30 @@
             <h3>RSS Feed</h3>
         </div>
         <div data-role="content" style="padding: 15px">
-        	<script language="javascript" src="http://www.rssfeedconverter.com/services/rssconverter.php?format=&url=http%3A%2F%2Ftoolmonger.com%2Ffeed%2F"></script>
+	        
+	        <script language="javascript" src="http://www.rssfeedconverter.com/services/rssconvert.php?format=js&url=http%3A%2F%2Fwww.rockler.com%2FrssProducts.xml"></script>
+
     	</div>
+		<div data-role="footer" data-position="fixed" data-id="home">
+					<div data-role="navbar" data-iconpos="top">
+						<ul>
+							<li><a href="#home" data-theme="b" data-icon="home" data-transition="slide" class="ui-btn-active">Home</a></li>
+						<li><a href="#additem" data-theme="b" data-icon="plus" data-transition="slide">Add Item</a></li>
+						<li><a href="#rss" data-theme="b" data-icon="gear" data-transition="slide">RSS Feed</a></li>
+						<li><a href="#about" data-theme="b" data-icon="info" data-transition="slide">Info</a></li>
+						</ul>
+					</div>
+				</div>
     </div>
     
+	<!-- call our javascript files -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<script src="https://ajax.aspnetcdn.com/ajax/jquery.mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>
+	<script src="js/libs/jquery.validate.min.js"></script>
+	<!-- call our json.js file -->
+	<script src="js/json.js" type="text/javascript"></script>
+	<!-- call our main.js file -->
+	<script src="js/main.js" type="text/javascript"></script>
+
 </body>
 </html>
