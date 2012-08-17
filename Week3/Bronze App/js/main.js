@@ -1,26 +1,26 @@
-//project 2
+//project 4
 //Ryan Trease
 
 //Wait until DOM is loaded
 window.addEventListener("DOMContentLoaded", function(){
     
     //variables
-    //var toolType = ["--Select Type--", "Hand Tool", "Power Tool", "Power Tool Accessory", "Hardware", "Lumber"];
+    var toolType = ["--Select Type--", "Hand Tool", "Power Tool", "Power Tool Accessory", "Hardware", "Lumber"];
     var purchaseType;
-    var errMsg = ge('errors');
+    var errMsg = $('errors');
    
     //getElementById function
-    function ge(x){
+    function $(x){
         var element = document.getElementById(x);
         return element;
     }
     
-    /*//select field element and populate
+    //select field element and populate
     function chooseToolType(){
         var formTag = document.getElementsByTagName("fieldset");
-        var select = ge('select');
+        var select = $('select');
         var makeSelect = document.createElement('select');
-        makeSelect.setAttribute("id", "select");
+        makeSelect.setAttribute("id", "groups");
         for(var i = 0, j=toolType.length; i<j; i++){
             var makeOption = document.createElement('option');
             var optText = toolType[i];
@@ -30,7 +30,7 @@ window.addEventListener("DOMContentLoaded", function(){
         }
         select.appendChild(makeSelect);
     }
-    chooseToolType();*/
+    chooseToolType();
     
     //find value of selected radio button
     function getSelected(){
@@ -45,19 +45,17 @@ window.addEventListener("DOMContentLoaded", function(){
         function toggleControls(n) {
         switch (n) {
             case "on":
-                ge('inputs').style.display = "none";
-				ge('footer').style.display = "none";
-                ge('clear').style.display = "inline";
-                ge('display').style.display = "none";
-                ge('addnew').style.display = "inline";
+                $('inputs').style.display = "none";
+                $('clear').style.display = "inline";
+                $('display').style.display = "none";
+                $('addnew').style.display = "inline";
                 break;
             case "off":
-                ge('inputs').style.display = "block";
-				ge('clear').style.display = "inline";
-                ge('display').style.display = "inline";
-                ge('addnew').style.display = "none";
-                ge('items').style.display = "none";
-				ge('footer').style.display = "inline";
+                $('inputs').style.display = "block";
+                $('clear').style.display = "inline";
+                $('display').style.display = "inline";
+                $('addnew').style.display = "none";
+                $('items').style.display = "none";
                 break;
             default:
             return false;
@@ -74,24 +72,24 @@ window.addEventListener("DOMContentLoaded", function(){
     	}
         getSelected();
         var item = {};
-            item.name = ["*Name:", ge('name').value];
-            item.select = ["*Tool/Item Type: ", ge('select').value];
-            item.make = ["*Make: ", ge('make').value];
-            item.mnumber = ["*Model Number: ", ge('mnumber').value];
-            item.snumber = ["Serial Number: ", ge('snumber').value];
-            item.dpurchased = ["Date Purchased: ", ge('dpurchased').value];
-            item.wpurchased = ["Where Purchased: ", ge('wpurchased').value];
-            item.price = ["Price: ", ge('price').value];
-            item.ev = ["Estimated Value: ", ge('ev').value];
+            item.name = ["Name:", $('name').value];
+            item.groups = ["Tool/Item Type: ", $('groups').value];
+            item.make = ["Make: ", $('make').value];
+            item.mnumber = ["Model Number: ", $('mnumber').value];
+            item.snumber = ["Serial Number: ", $('snumber').value];
+            item.dpurchased = ["Date Purchased: ", $('dpurchased').value];
+            item.wpurchased = ["Where Purchased: ", $('wpurchased').value];
+            item.price = ["Price: ", $('price').value];
+            item.ev = ["Estimated Value: ", $('ev').value];
             item.condition = ["New or Used: ", purchaseType];
-            item.qty = ["Quantity: ", ge('qty').value];
-            item.dateadded = ["Date Added: ", ge('dateadded').value];
-            item.notes = ["Additional notes: ", ge('notes').value];
+            item.qty = ["Quantity: ", $('qty').value];
+            item.dateadded = ["Date Added: ", $('dateadded').value];
+            item.notes = ["Additional notes: ", $('notes').value];
             
         //save to local storage: use stringify to convert to string
         localStorage.setItem(id, JSON.stringify(item));
         alert("Your item was stored successfully!");
-        window.location.reload();
+        
     }
     
     //write data to display in browser
@@ -106,8 +104,8 @@ window.addEventListener("DOMContentLoaded", function(){
 	        var makeList = document.createElement('div');
 	        makeList.setAttribute("id", "ulList");
 	        makeDiv.appendChild(makeList);
-	        additem.appendChild(makeDiv);
-	        ge('items').style.display = "block";
+	        document.body.appendChild(makeDiv);
+	        $('items').style.display = "block";
 	        for(var i=0, len=localStorage.length; i<len; i++){
 	            var makeLi = document.createElement('li');
 	            makeLi.setAttribute("id", "mainLi");
@@ -120,13 +118,13 @@ window.addEventListener("DOMContentLoaded", function(){
 	            var makeSubList = document.createElement('div');
 	            makeSubList.setAttribute("id", "subUl");
 	            makeLi.appendChild(makeSubList);
-	            getImage(obj.select[1], makeSubList);
+	            getImage(obj.groups[1], makeSubList);
 	            for(var n in obj){
 	                var makeSubLi = document.createElement('li');
 	                makeSubList.appendChild(makeSubLi);
 	                var optSubText = obj[n][0]+" "+obj[n][1];
 	                makeSubLi.innerHTML = optSubText;
-	                makeLi.appendChild(linksLi);
+	                makeSubList.appendChild(linksLi);
             	}
 	            makeItemLinks(localStorage.key(i), linksLi); //create edit and delete buttons
             }
@@ -176,15 +174,15 @@ window.addEventListener("DOMContentLoaded", function(){
     	//show form
     	toggleControls("off");
     	
-    	ge('name').value = item.name[1];
-    	ge('select').value = item.select[1];
-    	ge('make').value = item.make[1];
-    	ge('mnumber').value = item.mnumber[1];
-    	ge('snumber').value = item.snumber[1];
-    	ge('dpurchased').value = item.dpurchased[1];
-    	ge('wpurchased').value = item.wpurchased[1];
-    	ge('price').value = item.price[1];
-    	ge('ev').value = item.ev[1];
+    	$('name').value = item.name[1];
+    	$('groups').value = item.groups[1];
+    	$('make').value = item.make[1];
+    	$('mnumber').value = item.mnumber[1];
+    	$('snumber').value = item.snumber[1];
+    	$('dpurchased').value = item.dpurchased[1];
+    	$('wpurchased').value = item.wpurchased[1];
+    	$('price').value = item.price[1];
+    	$('ev').value = item.ev[1];
     	var radios = document.forms[0].condition;
     	for(var i = 0; i<radios.length; i++){
     		if(radios[i].value == "New" && item.condition[1] == "New"){
@@ -194,15 +192,15 @@ window.addEventListener("DOMContentLoaded", function(){
     			radios[i].setAttribute("checked", "checked");
     		}
     	}
-    	ge('qty').value = item.qty[1];
-    	ge('dateadded').value = item.dateadded[1];
-    	ge('notes').value = item.notes[1];
+    	$('qty').value = item.qty[1];
+    	$('dateadded').value = item.dateadded[1];
+    	$('notes').value = item.notes[1];
     	
     	//remove listener from input 'add item' button
     	save.removeEventListener("click", storeData);
     	//change submit value to edit
-    	ge('submit').value = "Edit Item";
-    	var editSubmit = ge('submit');
+    	$('submit').value = "Edit Item";
+    	var editSubmit = $('submit');
     	//save key value established
     	editSubmit.addEventListener("click", validate);
     	editSubmit.key = this.key;
@@ -235,44 +233,44 @@ window.addEventListener("DOMContentLoaded", function(){
     
     function validate(e){
     	//define elements to check
-    	var getName = ge('name');
-    	var getSelect = ge('select');
-    	var getMake = ge('make');
-    	var getMnumber = ge('mnumber');
+    	var getName = $('name');
+    	var getGroup = $('groups');
+    	var getMake = $('make');
+    	var getMnumber = $('mnumber');
     	
     	//reset error messages
     	errMsg.innerHTML = "";
-    	getName.style.border = "1px solid #999999";
-    	getSelect.style.border = "1px solid #999999";
-    	getMake.style.border = "1px solid #999999";
-    	getMnumber.style.border = "1px solid #999999";
+    	getName.style.border = "1px solid #4B88B6";
+    	getGroup.style.border = "1px solid #4B88B6";
+    	getMake.style.border = "1px solid #4B88B6";
+    	getMnumber.style.border = "1px solid #4B88B6";
     	
     	//error messages
     	var errorMessageArray = [];
     	//name error message
     	if(getName.value === ""){
-    		var nameError = "*Please enter a name.";
+    		var nameError = "Please enter an item name.";
     		getName.style.border = "1px solid red";
     		errorMessageArray.push(nameError);
     	}
     	
     	//group error message
-    	if(getSelect.value === "type"){
-    		var groupError = "*Please enter a tool type.";
-    		getSelect.style.border = "1px solid red";
+    	if(getGroup.value === "--Select Type--"){
+    		var groupError = "Please enter a tool type.";
+    		getGroup.style.border = "1px solid red";
     		errorMessageArray.push(groupError);
     	}
     	
     	//make error message
     	if(getMake.value === ""){
-    		var makeError = "*Please enter a make.";
+    		var makeError = "Please enter a tool make.";
     		getMake.style.border = "1px solid red";
     		errorMessageArray.push(makeError);
     	}
     	
     	//model number error message
     	if(getMnumber.value === ""){
-    		var mnumberError = "*Please enter a model number.";
+    		var mnumberError = "Please enter a model number.";
     		getMnumber.style.border = "1px solid red";
     		errorMessageArray.push(mnumberError);
     	}
@@ -293,12 +291,12 @@ window.addEventListener("DOMContentLoaded", function(){
     }
     
     //Links & click events
-    var display = ge('display');
+    var display = $('display');
     display.addEventListener("click", displayData);
     
-    var clear = ge('clear');
+    var clear = $('clear');
     clear.addEventListener("click", clearData);
     
-    var save = ge('submit');
+    var save = $('submit');
     save.addEventListener("click", validate);
 });
