@@ -20,6 +20,7 @@
 	<!-- StyleSheets under here -->
 	<link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/jquery.mobile/1.1.0/jquery.mobile-1.1.0.min.css" />
 	<link rel="stylesheet" href="css/style.css" />
+	<link rel="stylesheet" href="css/blues.css" />
 	
 	<!-- JavaScript is normally at the end of the body, except for Modernizr which enables HTML5 elements & feature detects -->
 	<script src="js/libs/modernizr.custom.min.js"></script>
@@ -31,15 +32,15 @@
             <h1>Shop Inventory</h1>
         </div>
         <div data-role="content" style="padding: 15px">
-            <div style="width: 100%; height: 190px; position: relative; background-color: #fbfbfb; border-radius: 8px; border: 1px solid #b8b8b8; text-align: center;">
+            <div style="width: 100%; height: 200px; position: relative; background-color: #fbfbfb; border-radius: 8px; border: 1px solid #b8b8b8; -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, .3); box-shadow: 0 1px 4px rgba(0, 0, 0, .3); text-align: center;">
             <p align="center">Keep an inventory of your tools and accessories with you at all times.</p>
             <img src="images/tools.png" alt="image" width="245px"/>
 				<div id="additemlink" style="margin-top: 15px; margin-left: 25px; margin-right: 25px;">
-					<a href="#additem" id="button" data-mini="true" data-theme="b" data-role="button" data-transition="slide">Click to Add A Tool</a>
+					<a href="#additem" id="button" data-theme="b" data-role="button" data-transition="slide">Click to Add A Tool</a>
 				</div>
 			</div>
 
-                <ul data-role="listview" data-divider-theme="b" data-inset="true" data-mini="true">
+                <ul data-role="listview" data-divider-theme="b" data-inset="true">
                     <li data-role="list-divider" role="heading">Browse Inventory By:</li>
 					<li data-theme="c"><a href="#all" data-transition="slide"><img src="images/alltools.png"/>All Tools</a></li>
                     <li data-theme="c"><a href="#handtools" data-transition="slide"><img src="images/handtools.png"/>Hand Tools</a></li>
@@ -48,7 +49,7 @@
                     <li data-theme="c"><a href="#hardware" data-transition="slide"><img src="images/hardware1.png"/>Hardware</a></li>
                     <li data-theme="c"><a href="#lumber" data-transition="slide"><img src="images/lumber1.png"/>Lumber</a></li>
                 </ul>
-                <ul data-role="listview" data-divider-theme="b" data-inset="true" data-mini="true">
+                <ul data-role="listview" data-divider-theme="b" data-inset="true">
                     <li data-role="list-divider" role="heading">App Extras:</li>
 					<li data-theme="c"><a href="#about" data-transition="slide"><img src="images/info.png"/>Info</a></li>
                     <li data-theme="c"><a href="#rss" data-transition="slide"><img src="images/feed.png"/>News Feed</a></li>
@@ -74,19 +75,19 @@
 		</div>
 
 		<div data-role="content" style="padding: 15px">
-
+			
 			<div id="inputs">
 				<form action="" id="toolForm" method="post">
 					<div data-role="fieldcontain">
-						<fieldset data-mini="true" data-role="controlgroup">
-							<label for="name">*Name</label> 
+						<fieldset data-role="controlgroup">
+							<label for="name">*Name:</label> 
 							<input class="required" id="name" name="name" type="text" placeholder="drill press, table saw, wrench, etc."/>
 						</fieldset>
 					</div>
 
 					<div data-role="fieldcontain">
-						<label for="selectType">*Tool/Item Type</label> 
-						<select name="selectType" id="selectType" data-mini="true" data-theme="c" class="required" value="Please Select Type...">
+						<label for="selectType">*Tool/Item Type:</label> 
+						<select name="selectType" id="selectType" data-theme="c" class="required" value="Please Select Type...">
 							<option data-placeholder="selection" value>Please Select Type...</option>
 							<option value="handtool">Hand Tool</option>
 							<option value="powertool">Power Tool</option>
@@ -97,57 +98,57 @@
 					</div>
 
 					<div data-role="fieldcontain">
-						<fieldset data-mini="true" data-role="controlgroup">
-							<label for="make">*Make</label> 
+						<fieldset data-role="controlgroup">
+							<label for="make">*Make:</label> 
 							<input class="required" id="make" name="make" type="text" placeholder="Delta, Makita, DeWalt, etc."/>
 						</fieldset>
 					</div>
 
 					<div data-role="fieldcontain">
-						<fieldset data-mini="true" data-role="controlgroup">
-							<label for="mnumber">*Model Number</label>
+						<fieldset data-role="controlgroup">
+							<label for="mnumber">*Model Number:</label>
 							<input class="required" id="mnumber" name="mnumber" type="text"/>
 						</fieldset>
 					</div>
 
 					<div data-role="fieldcontain">
-						<fieldset data-mini="true" data-role="controlgroup">
-							<label for="snumber">Serial Number</label>
+						<fieldset data-role="controlgroup">
+							<label for="snumber">Serial Number:</label>
 							<input id="snumber" name="snumber" type="text"/>
 						</fieldset>
 					</div>
 
 					<div data-role="fieldcontain">
-						<fieldset data-mini="true" data-role="controlgroup">
-							<label for="dpurchased">Date Purchased</label>
+						<fieldset data-role="controlgroup">
+							<label for="dpurchased">Date Purchased:</label>
 							<input id="dpurchased" name="dpurchased" type="date"/>
 						</fieldset>
 					</div>
 
 					<div data-role="fieldcontain">
-						<fieldset data-mini="true" data-role="controlgroup">
-							<label for="wpurchased">Where Purchased</label>
+						<fieldset data-role="controlgroup">
+							<label for="wpurchased">Where Purchased:</label>
 							<input id="wpurchased" name="wpurchased" type="text"/>
 						</fieldset>
 					</div>
 
 					<div data-role="fieldcontain">
-						<fieldset data-mini="true" data-role="controlgroup">
-							<label for="price">Price</label> 
+						<fieldset data-role="controlgroup">
+							<label for="price">Price:</label> 
 							<input id="price" name="price" type="text"/>
 						</fieldset>
 					</div>
 
 					<div data-role="fieldcontain">
-						<fieldset data-mini="true" data-role="controlgroup">
-							<label for="ev">Estimated Value</label>
+						<fieldset data-role="controlgroup">
+							<label for="ev">Estimated Value:</label>
 							<input id="ev" name="ev" type="text"/>
 						</fieldset>
 					</div>
 
 					<div data-role="fieldcontain">
-						<fieldset data-role="controlgroup" data-mini="true">
-							<legend>Purchase Type</legend>
+						<fieldset data-role="controlgroup">
+							<legend>Purchase Type:</legend>
 							<input data-theme="c" id="type-1" name="condition" type="radio" value="New" checked="checked"/>
 							<label for="type-1">New</label>
 							<input data-theme="c" id="type-2" name="condition" type="radio" value="Used"/> 
@@ -156,32 +157,30 @@
 					</div>
 
 					<div data-role="fieldcontain">
-						<fieldset data-mini="true" data-role="controlgroup">
-							<label for="qty">Quantity</label>
+						<fieldset data-role="controlgroup">
+							<label for="qty">Quantity:</label>
 							<input data-highlight="true" data-theme="c" id="qty" max="100" min="1" name="qty" type="range" value="1"/>
 						</fieldset>
 					</div>
 
 					<div data-role="fieldcontain">
-						<fieldset data-mini="true" data-role="controlgroup">
-							<label for="dateadded">Date Added</label>
+						<fieldset data-role="controlgroup">
+							<label for="dateadded">Date Added:</label>
 							<input id="dateadded" name="dateadded" type="date"/>
 						</fieldset>
 					</div>
 
 					<div data-role="fieldcontain">
 						<fieldset data-role="controlgroup">
-							<label for="notes">Additional Notes</label> 
+							<label for="notes">Additional Notes:</label> 
 							<textarea id="notes" name="notes"></textarea>
 						</fieldset>
 					</div>
 
 					<div data-role="fieldcontain">
-						<input id="submit" data-icon="plus" data-iconpos="left" data-mini="yes" data-theme="b" type="submit" value="Add Item To List"/>
-						<input id="reset" data-icon="delete" data-iconpos="left" data-mini="yes" data-theme="c" type="reset" value="Reset Form"/> 
+						<input id="submit" data-icon="plus" data-iconpos="left" data-theme="b" type="submit" value="Add Item To List"/>
+						<input id="reset" data-icon="delete" data-iconpos="left" data-theme="c" type="reset" value="Reset Form"/> 
 					</div>
-					
-					<a href="#toolformerrors" id="tferrorsLink" data-rel="dialog">Errors</a>
 					
 				</form>
 			</div>
@@ -198,18 +197,6 @@
 		</div>
 	</div>
 	
-	<div data-role="dialog" data-theme="b" id="toolformerrors">
-        <div data-position="fixed" data-role="header" data-theme="b">
-            <h1>Missing Felds</h1>
-        </div>
-
-        <div data-role="content">
-        	<ul id="missingfields">
-        		<li>Test</li>
-        	</ul>
-        </div>
-	</div>
- 
     <div data-role="page" data-theme="b" id="all">
         <div data-position="fixed" data-role="header" data-theme="b">
             <a href="#home" data-icon="back" data-rel="back">Back</a>
@@ -217,7 +204,7 @@
         </div>
 
         <div data-role="content" style="padding: 15px">
-            <ul data-divider-theme="b" data-filter="true" data-inset="true" data-mini="true" data-role="listview">
+            <ul data-divider-theme="b" data-filter="true" data-inset="true" data-role="listview">
                 <li data-theme="c"><a data-transition="slide" href="#dpress">Drill Press</a></li>
                 <li data-theme="c"><a data-transition="slide" href="#wrench">Wrench</a></li>
                 <li data-theme="c"><a data-transition="slide" href="#msaw">Miter Saw</a></li>
@@ -259,7 +246,7 @@
         </div>
 
         <div data-role="content" style="padding: 15px">
-            <ul data-divider-theme="b" data-filter="true" data-inset="true" data-mini="true" data-role="listview">
+            <ul data-divider-theme="b" data-filter="true" data-inset="true" data-role="listview">
                 <li data-theme="c"><a data-transition="slide" href="#wrench">Wrench</a></li>
             </ul>
 			<div data-role="footer" data-position="fixed" data-id="home">
@@ -282,7 +269,7 @@
         </div>
 
         <div data-role="content" style="padding: 15px">
-            <ul data-divider-theme="b" data-filter="true" data-inset="true" data-mini="true" data-role="listview">
+            <ul data-divider-theme="b" data-filter="true" data-inset="true" data-role="listview">
                 <li data-theme="c"><a data-transition="slide" href="#dpress">Drill Press</a></li>
                 <li data-theme="c"><a data-transition="slide" href="#msaw">Miter Saw</a></li>
                 <li data-theme="c"><a data-transition="slide" href="#bjoiner">Biscuit Joiner</a></li>
@@ -312,7 +299,7 @@
         </div>
 
         <div data-role="content" style="padding: 15px">
-            <ul data-divider-theme="b" data-filter="true" data-inset="true" data-mini="true" data-role="listview">
+            <ul data-divider-theme="b" data-filter="true" data-inset="true" data-role="listview">
                 <li data-theme="c"><a data-transition="slide" href="#rtemp">Router Template Guide Set</a></li>
                 <li data-theme="c"><a data-transition="slide" href="#edge">Edge Guide</a></li>
                 <li data-theme="c"><a data-transition="slide" href="#incrals">INCRA LS Positioner Super System</a></li>
@@ -337,7 +324,7 @@
         </div>
 
         <div data-role="content" style="padding: 15px">
-            <ul data-divider-theme="b" data-filter="true" data-inset="true" data-mini="true" data-role="listview">
+            <ul data-divider-theme="b" data-filter="true" data-inset="true" data-role="listview">
                 <li data-theme="c"><a data-transition="slide" href="#spax">SPAX General Woodworking Screw Assortment</a></li>
                 <li data-theme="c"><a data-transition="slide" href="#bscrews">#8 Black Oxide Plated Flat Head Screw Assortment</a></li>
             </ul>
@@ -361,7 +348,7 @@
         </div>
 
         <div data-role="content" style="padding: 15px">
-            <ul data-divider-theme="b" data-filter="true" data-inset="true" data-mini="true" data-role="listview">
+            <ul data-divider-theme="b" data-filter="true" data-inset="true" data-role="listview">
                 <li data-theme="c"><a data-transition="slide" href="#hmaple">Hard Maple</a></li>
                 <li data-theme="c"><a data-transition="slide" href="#bmaple">Birdseye Maple</a></li>
                 <li data-theme="c"><a data-transition="slide" href="#mahogany">Mahogany</a></li>
@@ -1188,8 +1175,8 @@
             <h3>About</h3>
         </div>
         <div data-role="content" style="padding: 15px">
-            <a data-role="button" data-mini="true" data-transition="fade" data-theme="b" href="https://github.com/rstrease/MiU.git">github Repository</a>
-            <a data-role="button" data-mini="true" data-transition="fade" data-theme="b" href="https://github.com/rstrease/MiU/tree/gh-pages/Week2">github Live Link</a>
+            <a data-role="button" data-transition="fade" data-theme="b" href="https://github.com/rstrease/MiU.git">github Repository</a>
+            <a data-role="button" data-transition="fade" data-theme="b" href="https://github.com/rstrease/MiU/tree/gh-pages/Week2">github Live Link</a>
         </div>
 <div data-role="footer" data-position="fixed" data-id="home">
 					<div data-role="navbar" data-iconpos="top">
