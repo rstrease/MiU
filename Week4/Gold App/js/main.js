@@ -3,7 +3,7 @@ $('#home').on('pageinit', function(){
 });	
 		
 $('#additem').on('pageinit', function(){
-
+		delete $.validator.methods.date;
 		var myForm = $('#toolForm');
 		    myForm.validate({
 			invalidHandler: function(form, validator) {
