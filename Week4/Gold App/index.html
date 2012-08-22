@@ -75,8 +75,12 @@
 
 		<div data-role="content" style="padding: 15px">
 			
+                <div id="display">
+                    <a href="#display" data-theme="b" data-iconpos="left" data-role="button" data-transition="slide">Display Data</a>
+                </div>
+							
 			<div id="inputs">
-				<form action="" id="toolForm" method="post">
+				<form action="#display" id="toolForm" method="post">
 					<div data-role="fieldcontain">
 						<fieldset data-role="controlgroup">
 							<label for="name">*Name:</label> 
@@ -183,6 +187,7 @@
 					
 				</form>
 			</div>
+			
 			<div data-role="footer" data-position="fixed" data-id="home">
 				<div data-role="navbar" data-iconpos="top">
 					<ul>
@@ -196,6 +201,34 @@
 		</div>
 	</div>
 	
+	<div data-role="page" data-theme="b" id="display">
+        <div data-position="fixed" data-role="header" data-theme="b">
+            <a href="#home" data-icon="back" data-rel="back">Back</a>
+            <h1>Display</h1>
+        </div>
+
+        <div data-role="content" style="padding: 15px">
+			<div class="ui-grid-a">
+                	<div class="ui-block-a" id="clear">
+                    	<a href="#" data-theme="b" data-icon="delete" data-iconpos="left" data-role="button" data-transition="slide">Clear Data</a>
+                    </div>
+                    <div class="ui-block-b"  id="addnew">
+                    	<a href="#additem" data-theme="b" data-icon="plus" data-iconpos="left" data-role="button" data-transition="slide">New Item</a>
+                    </div>
+                </div> 
+        </div>
+		<div data-role="footer" data-position="fixed" data-id="home">
+			<div data-role="navbar" data-iconpos="top">
+				<ul>
+					<li><a href="#home" data-theme="b" data-icon="home" data-transition="slide" class="ui-btn-active">Home</a></li>
+					<li><a href="#additem" data-theme="b" data-icon="plus" data-transition="slide">New Item</a></li>
+					<li><a href="#rss" data-theme="b" data-icon="gear" data-transition="slide">RSS Feed</a></li>
+					<li><a href="#about" data-theme="b" data-icon="info" data-transition="slide">Info</a></li>
+				</ul>
+			</div>
+		</div>
+    </div>
+		
     <div data-role="page" data-theme="b" id="all">
         <div data-position="fixed" data-role="header" data-theme="b">
             <a href="#home" data-icon="back" data-rel="back">Back</a>
@@ -367,6 +400,7 @@
 				</div>
         </div>
     </div>
+
 
 
     <div data-role="page" data-theme="b" id="dpress">
@@ -1196,19 +1230,21 @@
         </div>
         <div data-role="content" style="padding: 15px">
 	        
-	        <script type="text/javascript" src="http://www.rssfeedconverter.com/services/rssconvert.php?format=js&url=http%3A%2F%2Fwww.rockler.com%2FrssProducts.xml"></script>
+	        <!-- start www.rssground.com code snippet -->
+			<script type="text/javascript" src="http://www.rssfeedconverter.com/services/rss-converter/5034edbacb9e0/snippet4-20120822"></script>
+			<!-- end www.rssground.com code snippet -->
 
     	</div>
 		<div data-role="footer" data-position="fixed" data-id="home">
-					<div data-role="navbar" data-iconpos="top">
-						<ul>
-							<li><a href="#home" data-theme="b" data-icon="home" data-transition="slide" class="ui-btn-active">Home</a></li>
-						<li><a href="#additem" data-theme="b" data-icon="plus" data-transition="slide">New Item</a></li>
-						<li><a href="#rss" data-theme="b" data-icon="gear" data-transition="slide">RSS Feed</a></li>
-						<li><a href="#about" data-theme="b" data-icon="info" data-transition="slide">Info</a></li>
-						</ul>
-					</div>
-				</div>
+			<div data-role="navbar" data-iconpos="top">
+				<ul>
+					<li><a href="#home" data-theme="b" data-icon="home" data-transition="slide" class="ui-btn-active">Home</a></li>
+					<li><a href="#additem" data-theme="b" data-icon="plus" data-transition="slide">New Item</a></li>
+					<li><a href="#rss" data-theme="b" data-icon="gear" data-transition="slide">RSS Feed</a></li>
+					<li><a href="#about" data-theme="b" data-icon="info" data-transition="slide">Info</a></li>
+				</ul>
+			</div>
+		</div>
     </div>
     
 	<!-- call our javascript files -->
