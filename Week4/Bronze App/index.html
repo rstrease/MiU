@@ -16,6 +16,7 @@
 	
 	<!-- StyleSheets under here -->
 	<link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/jquery.mobile/1.1.0/jquery.mobile-1.1.0.min.css" />
+	<link rel="stylesheet" href="themes/blues.css" />
 
 	
 	<!-- JavaScript is normally at the end of the body, except for Modernizr which enables HTML5 elements & feature detects -->
@@ -25,11 +26,14 @@
 
 	<style>#thumbnail{
 	border-radius: 8px; 
-	border: 1px solid #b8b8b8; 
+	border: 1px solid #b8b8b8;
+	background-color: white; 
 	text-align: center;
 	margin: 16px;
 	max-width: 100px;
-	max-height: 100px;}
+	max-height: 100px;
+	-webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, .3); 
+	box-shadow: 0 1px 4px rgba(0, 0, 0, .3); text-align: center;}
 	a {
 	font-size: 12px;
 	text-decoration: none;}
@@ -39,18 +43,18 @@
 <body>
 
 <!-- Home -->
-<div data-role="page" id="home" data-theme="b">
-    <div data-theme="b" data-role="header" data-position="fixed">
+<div data-role="page" id="home" data-theme="d">
+    <div data-theme="d" data-role="header" data-position="fixed">
         <h3>
             Shop Inventory
         </h3>
     </div>
     <div data-role="content" style="padding: 15px">
-                <div style="width: 100%; height: 190px; position: relative; background-color: #fbfbfb; border-radius: 8px; border: 1px solid #b8b8b8; text-align: center;">
-                	<p align="center">Keep an inventory of your tools and accessories with you at all times.</p>
+                <div style="width: 100%; height: 190px; position: relative; background-color: #fbfbfb; border-radius: 8px; border: 1px solid #b8b8b8; text-align: center; -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, .3); box-shadow: 0 1px 4px rgba(0, 0, 0, .3);">
+                	<p align="center" style="color: #474747">Keep an inventory of your tools and accessories with you at all times.</p>
                 	<img src="images/tools.png" alt="image" width="245px"/>
                 	<div id="additemlink" style="margin-top: 15px; margin-left: 25px; margin-right: 25px;">
-						<a href="additem.html" data-ajax="false" id="button" data-mini="true" data-theme="b" data-role="button" data-transition="slide">Click to Add A Tool</a>
+						<a href="additem.html" data-ajax="false" id="button" data-mini="true" data-theme="a" data-role="button" data-transition="slide">Click to Add A Tool</a>
 					</div>
                 </div>
         <div data-role="collapsible-set" data-theme="c" data-content-theme="d" data-mini="true" style="margin-top: 20px;">
@@ -301,17 +305,17 @@
     <div data-role="footer" data-position="fixed" data-id="home">
 					<div data-role="navbar" data-iconpos="top">
 						<ul>
-							<li><a href="#home" data-theme="b" data-icon="home" data-transition="slide" class="ui-btn-active">Home</a></li>
-						<li><a href="additem.html" data-ajax="false" data-theme="b" data-icon="plus" data-transition="slide">New Item</a></li>
-						<li><a href="#rss" data-theme="b" data-icon="gear" data-transition="slide">RSS Feed</a></li>
-						<li><a href="#about" data-theme="b" data-icon="info" data-transition="slide">Info</a></li>
+							<li><a href="#home" data-theme="d" data-icon="home" data-transition="slide" class="ui-btn-active">Home</a></li>
+						<li><a href="additem.html" data-ajax="false" data-theme="d" data-icon="plus" data-transition="slide">New Item</a></li>
+						<li><a href="#rss" data-theme="d" data-icon="gear" data-transition="slide">RSS Feed</a></li>
+						<li><a href="#about" data-theme="d" data-icon="info" data-transition="slide">Info</a></li>
 						</ul>
 					</div>
 				</div>
 </div>
 
-<div data-role="page" data-theme="b" id="dpress">
-        <div data-role="header" data-theme="b">
+<div data-role="page" data-theme="d" id="dpress">
+        <div data-role="header" data-theme="d">
             <a href="#all" data-icon="back" data-rel="back">Back</a>
             <h3>Drill Press</h3>
         </div>
@@ -340,18 +344,18 @@
 			<div data-role="footer" data-position="fixed" data-id="home">
 					<div data-role="navbar" data-iconpos="top">
 						<ul>
-							<li><a href="#home" data-theme="b" data-icon="home" data-transition="slide" class="ui-btn-active">Home</a></li>
-						<li><a href="#additem" data-ajax="false" data-theme="b" data-icon="plus" data-transition="slide">New Item</a></li>
-						<li><a href="#rss" data-theme="b" data-icon="gear" data-transition="slide">RSS Feed</a></li>
-						<li><a href="#about" data-theme="b" data-icon="info" data-transition="slide">Info</a></li>
+							<li><a href="#home" data-theme="d" data-icon="home" data-transition="slide" class="ui-btn-active">Home</a></li>
+						<li><a href="#additem" data-ajax="false" data-theme="d" data-icon="plus" data-transition="slide">New Item</a></li>
+						<li><a href="#rss" data-theme="d" data-icon="gear" data-transition="slide">RSS Feed</a></li>
+						<li><a href="#about" data-theme="d" data-icon="info" data-transition="slide">Info</a></li>
 						</ul>
 					</div>
 				</div>
         </div>
     </div>
 
-<div data-role="page" data-theme="b" id="wrench">
-            <div data-role="header" data-theme="b">
+<div data-role="page" data-theme="d" id="wrench">
+            <div data-role="header" data-theme="d">
                 <a href="#all" data-icon="back" data-rel="back">Back</a>
                 <h3>Wrench</h3>
             </div>
@@ -380,18 +384,18 @@
 				<div data-role="footer" data-position="fixed" data-id="home">
 					<div data-role="navbar" data-iconpos="top">
 						<ul>
-							<li><a href="#home" data-theme="b" data-icon="home" data-transition="slide" class="ui-btn-active">Home</a></li>
-						<li><a href="#additem" data-ajax="false" data-theme="b" data-icon="plus" data-transition="slide">New Item</a></li>
-						<li><a href="#rss" data-theme="b" data-icon="gear" data-transition="slide">RSS Feed</a></li>
-						<li><a href="#about" data-theme="b" data-icon="info" data-transition="slide">Info</a></li>
+							<li><a href="#home" data-theme="d" data-icon="home" data-transition="slide" class="ui-btn-active">Home</a></li>
+						<li><a href="#additem" data-ajax="false" data-theme="d" data-icon="plus" data-transition="slide">New Item</a></li>
+						<li><a href="#rss" data-theme="d" data-icon="gear" data-transition="slide">RSS Feed</a></li>
+						<li><a href="#about" data-theme="d" data-icon="info" data-transition="slide">Info</a></li>
 						</ul>
 					</div>
 				</div>
             </div>
         </div>
 
-	<div data-role="page" data-theme="b" id="msaw">
-        <div data-role="header" data-theme="b">
+	<div data-role="page" data-theme="d" id="msaw">
+        <div data-role="header" data-theme="d">
             <a href="#all" data-icon="back" data-rel="back">Back</a>
             <h3>Miter Saw</h3>
         </div>
@@ -420,18 +424,18 @@
 			<div data-role="footer" data-position="fixed" data-id="home">
 					<div data-role="navbar" data-iconpos="top">
 						<ul>
-							<li><a href="#home" data-theme="b" data-icon="home" data-transition="slide" class="ui-btn-active">Home</a></li>
-						<li><a href="#additem" data-ajax="false" data-theme="b" data-icon="plus" data-transition="slide">New Item</a></li>
-						<li><a href="#rss" data-theme="b" data-icon="gear" data-transition="slide">RSS Feed</a></li>
-						<li><a href="#about" data-theme="b" data-icon="info" data-transition="slide">Info</a></li>
+							<li><a href="#home" data-theme="d" data-icon="home" data-transition="slide" class="ui-btn-active">Home</a></li>
+						<li><a href="#additem" data-ajax="false" data-theme="d" data-icon="plus" data-transition="slide">New Item</a></li>
+						<li><a href="#rss" data-theme="d" data-icon="gear" data-transition="slide">RSS Feed</a></li>
+						<li><a href="#about" data-theme="d" data-icon="info" data-transition="slide">Info</a></li>
 						</ul>
 					</div>
 				</div>
         </div>
     </div>        
     
-	<div data-role="page" data-theme="b" id="rtemp">
-        <div data-role="header" data-theme="b">
+	<div data-role="page" data-theme="d" id="rtemp">
+        <div data-role="header" data-theme="d">
             <a href="#all" data-icon="back" data-rel="back">Back</a>
             <h3>Router Template Guide Set</h3>
         </div>
@@ -460,18 +464,18 @@
 			<div data-role="footer" data-position="fixed" data-id="home">
 					<div data-role="navbar" data-iconpos="top">
 						<ul>
-							<li><a href="#home" data-theme="b" data-icon="home" data-transition="slide" class="ui-btn-active">Home</a></li>
-						<li><a href="#additem" data-ajax="false" data-theme="b" data-icon="plus" data-transition="slide">New Item</a></li>
-						<li><a href="#rss" data-theme="b" data-icon="gear" data-transition="slide">RSS Feed</a></li>
-						<li><a href="#about" data-theme="b" data-icon="info" data-transition="slide">Info</a></li>
+							<li><a href="#home" data-theme="d" data-icon="home" data-transition="slide" class="ui-btn-active">Home</a></li>
+						<li><a href="#additem" data-ajax="false" data-theme="d" data-icon="plus" data-transition="slide">New Item</a></li>
+						<li><a href="#rss" data-theme="d" data-icon="gear" data-transition="slide">RSS Feed</a></li>
+						<li><a href="#about" data-theme="d" data-icon="info" data-transition="slide">Info</a></li>
 						</ul>
 					</div>
 				</div>
         </div>
     </div>
     
-	<div data-role="page" data-theme="b" id="edge">
-        <div data-role="header" data-theme="b">
+	<div data-role="page" data-theme="d" id="edge">
+        <div data-role="header" data-theme="d">
             <a href="#all" data-icon="back" data-rel="back">Back</a>
             <h3>Edge Guide</h3>
         </div>
@@ -500,18 +504,18 @@
 			<div data-role="footer" data-position="fixed" data-id="home">
 					<div data-role="navbar" data-iconpos="top">
 						<ul>
-							<li><a href="#home" data-theme="b" data-icon="home" data-transition="slide" class="ui-btn-active">Home</a></li>
-						<li><a href="#additem" data-ajax="false" data-theme="b" data-icon="plus" data-transition="slide">New Item</a></li>
-						<li><a href="#rss" data-theme="b" data-icon="gear" data-transition="slide">RSS Feed</a></li>
-						<li><a href="#about" data-theme="b" data-icon="info" data-transition="slide">Info</a></li>
+							<li><a href="#home" data-theme="d" data-icon="home" data-transition="slide" class="ui-btn-active">Home</a></li>
+						<li><a href="#additem" data-ajax="false" data-theme="d" data-icon="plus" data-transition="slide">New Item</a></li>
+						<li><a href="#rss" data-theme="d" data-icon="gear" data-transition="slide">RSS Feed</a></li>
+						<li><a href="#about" data-theme="d" data-icon="info" data-transition="slide">Info</a></li>
 						</ul>
 					</div>
 				</div>
         </div>
     </div>        
     
-	<div data-role="page" data-theme="b" id="bjoiner">
-        <div data-role="header" data-theme="b">
+	<div data-role="page" data-theme="d" id="bjoiner">
+        <div data-role="header" data-theme="d">
             <a href="#all" data-icon="back" data-rel="back">Back</a>
             <h3>Biscuit Joiner</h3>
         </div>
@@ -540,18 +544,18 @@
 			<div data-role="footer" data-position="fixed" data-id="home">
 					<div data-role="navbar" data-iconpos="top">
 						<ul>
-							<li><a href="#home" data-theme="b" data-icon="home" data-transition="slide" class="ui-btn-active">Home</a></li>
-						<li><a href="#additem" data-ajax="false" data-theme="b" data-icon="plus" data-transition="slide">New Item</a></li>
-						<li><a href="#rss" data-theme="b" data-icon="gear" data-transition="slide">RSS Feed</a></li>
-						<li><a href="#about" data-theme="b" data-icon="info" data-transition="slide">Info</a></li>
+							<li><a href="#home" data-theme="d" data-icon="home" data-transition="slide" class="ui-btn-active">Home</a></li>
+						<li><a href="#additem" data-ajax="false" data-theme="d" data-icon="plus" data-transition="slide">New Item</a></li>
+						<li><a href="#rss" data-theme="d" data-icon="gear" data-transition="slide">RSS Feed</a></li>
+						<li><a href="#about" data-theme="d" data-icon="info" data-transition="slide">Info</a></li>
 						</ul>
 					</div>
 				</div>
         </div>
     </div>    
 
-	<div data-role="page" data-theme="b" id="rkit">
-        <div data-role="header" data-theme="b">
+	<div data-role="page" data-theme="d" id="rkit">
+        <div data-role="header" data-theme="d">
             <a href="#all" data-icon="back" data-rel="back">Back</a>
             <h3>Router Kit</h3>
         </div>
@@ -580,18 +584,18 @@
 			<div data-role="footer" data-position="fixed" data-id="home">
 					<div data-role="navbar" data-iconpos="top">
 						<ul>
-							<li><a href="#home" data-theme="b" data-icon="home" data-transition="slide" class="ui-btn-active">Home</a></li>
-						<li><a href="#additem" data-ajax="false" data-theme="b" data-icon="plus" data-transition="slide">New Item</a></li>
-						<li><a href="#rss" data-theme="b" data-icon="gear" data-transition="slide">RSS Feed</a></li>
-						<li><a href="#about" data-theme="b" data-icon="info" data-transition="slide">Info</a></li>
+							<li><a href="#home" data-theme="d" data-icon="home" data-transition="slide" class="ui-btn-active">Home</a></li>
+						<li><a href="#additem" data-ajax="false" data-theme="d" data-icon="plus" data-transition="slide">New Item</a></li>
+						<li><a href="#rss" data-theme="d" data-icon="gear" data-transition="slide">RSS Feed</a></li>
+						<li><a href="#about" data-theme="d" data-icon="info" data-transition="slide">Info</a></li>
 						</ul>
 					</div>
 				</div>
         </div>
     </div>
 
-	<div data-role="page" data-theme="b" id="hmaple">
-        <div data-role="header" data-theme="b">
+	<div data-role="page" data-theme="d" id="hmaple">
+        <div data-role="header" data-theme="d">
             <a href="#all" data-icon="back" data-rel="back">Back</a>
             <h3>Hard Maple</h3>
         </div>
@@ -620,18 +624,18 @@
 			<div data-role="footer" data-position="fixed" data-id="home">
 					<div data-role="navbar" data-iconpos="top">
 						<ul>
-							<li><a href="#home" data-theme="b" data-icon="home" data-transition="slide" class="ui-btn-active">Home</a></li>
-						<li><a href="#additem" data-ajax="false" data-theme="b" data-icon="plus" data-transition="slide">New Item</a></li>
-						<li><a href="#rss" data-theme="b" data-icon="gear" data-transition="slide">RSS Feed</a></li>
-						<li><a href="#about" data-theme="b" data-icon="info" data-transition="slide">Info</a></li>
+							<li><a href="#home" data-theme="d" data-icon="home" data-transition="slide" class="ui-btn-active">Home</a></li>
+						<li><a href="#additem" data-ajax="false" data-theme="d" data-icon="plus" data-transition="slide">New Item</a></li>
+						<li><a href="#rss" data-theme="d" data-icon="gear" data-transition="slide">RSS Feed</a></li>
+						<li><a href="#about" data-theme="d" data-icon="info" data-transition="slide">Info</a></li>
 						</ul>
 					</div>
 				</div>
         </div>
     </div>
 
-	<div data-role="page" data-theme="b" id="bmaple">
-        <div data-role="header" data-theme="b">
+	<div data-role="page" data-theme="d" id="bmaple">
+        <div data-role="header" data-theme="d">
             <a href="#all" data-icon="back" data-rel="back">Back</a>
             <h3>Birdseye Maple</h3>
         </div>
@@ -660,18 +664,18 @@
 			<div data-role="footer" data-position="fixed" data-id="home">
 					<div data-role="navbar" data-iconpos="top">
 						<ul>
-							<li><a href="#home" data-theme="b" data-icon="home" data-transition="slide" class="ui-btn-active">Home</a></li>
-						<li><a href="#additem" data-ajax="false" data-theme="b" data-icon="plus" data-transition="slide">New Item</a></li>
-						<li><a href="#rss" data-theme="b" data-icon="gear" data-transition="slide">RSS Feed</a></li>
-						<li><a href="#about" data-theme="b" data-icon="info" data-transition="slide">Info</a></li>
+							<li><a href="#home" data-theme="d" data-icon="home" data-transition="slide" class="ui-btn-active">Home</a></li>
+						<li><a href="#additem" data-ajax="false" data-theme="d" data-icon="plus" data-transition="slide">New Item</a></li>
+						<li><a href="#rss" data-theme="d" data-icon="gear" data-transition="slide">RSS Feed</a></li>
+						<li><a href="#about" data-theme="d" data-icon="info" data-transition="slide">Info</a></li>
 						</ul>
 					</div>
 				</div>
         </div>
     </div>
 
-	<div data-role="page" data-theme="b" id="mahogany">
-        <div data-role="header" data-theme="b">
+	<div data-role="page" data-theme="d" id="mahogany">
+        <div data-role="header" data-theme="d">
             <a href="#all" data-icon="back" data-rel="back">Back</a>
             <h3>Mahogany</h3>
         </div>
@@ -700,18 +704,18 @@
 			<div data-role="footer" data-position="fixed" data-id="home">
 					<div data-role="navbar" data-iconpos="top">
 						<ul>
-							<li><a href="#home" data-theme="b" data-icon="home" data-transition="slide" class="ui-btn-active">Home</a></li>
-						<li><a href="#additem" data-ajax="false" data-theme="b" data-icon="plus" data-transition="slide">New Item</a></li>
-						<li><a href="#rss" data-theme="b" data-icon="gear" data-transition="slide">RSS Feed</a></li>
-						<li><a href="#about" data-theme="b" data-icon="info" data-transition="slide">Info</a></li>
+							<li><a href="#home" data-theme="d" data-icon="home" data-transition="slide" class="ui-btn-active">Home</a></li>
+						<li><a href="#additem" data-ajax="false" data-theme="d" data-icon="plus" data-transition="slide">New Item</a></li>
+						<li><a href="#rss" data-theme="d" data-icon="gear" data-transition="slide">RSS Feed</a></li>
+						<li><a href="#about" data-theme="d" data-icon="info" data-transition="slide">Info</a></li>
 						</ul>
 					</div>
 				</div>
         </div>
     </div>
 
-	<div data-role="page" data-theme="b" id="unisaw">
-        <div data-role="header" data-theme="b">
+	<div data-role="page" data-theme="d" id="unisaw">
+        <div data-role="header" data-theme="d">
             <a href="#all" data-icon="back" data-rel="back">Back</a>
             <h3>10 in. UNISAW</h3>
         </div>
@@ -740,18 +744,18 @@
 			<div data-role="footer" data-position="fixed" data-id="home">
 					<div data-role="navbar" data-iconpos="top">
 						<ul>
-							<li><a href="#home" data-theme="b" data-icon="home" data-transition="slide" class="ui-btn-active">Home</a></li>
-						<li><a href="#additem" data-ajax="false" data-theme="b" data-icon="plus" data-transition="slide">New Item</a></li>
-						<li><a href="#rss" data-theme="b" data-icon="gear" data-transition="slide">RSS Feed</a></li>
-						<li><a href="#about" data-theme="b" data-icon="info" data-transition="slide">Info</a></li>
+							<li><a href="#home" data-theme="d" data-icon="home" data-transition="slide" class="ui-btn-active">Home</a></li>
+						<li><a href="#additem" data-ajax="false" data-theme="d" data-icon="plus" data-transition="slide">New Item</a></li>
+						<li><a href="#rss" data-theme="d" data-icon="gear" data-transition="slide">RSS Feed</a></li>
+						<li><a href="#about" data-theme="d" data-icon="info" data-transition="slide">Info</a></li>
 						</ul>
 					</div>
 				</div>
         </div>
     </div>
 
-	<div data-role="page" data-theme="b" id="bandsaw">
-        <div data-role="header" data-theme="b">
+	<div data-role="page" data-theme="d" id="bandsaw">
+        <div data-role="header" data-theme="d">
             <a href="#all" data-icon="back" data-rel="back">Back</a>
             <h3>14 in. Band Saw</h3>
         </div>
@@ -780,18 +784,18 @@
 			<div data-role="footer" data-position="fixed" data-id="home">
 					<div data-role="navbar" data-iconpos="top">
 						<ul>
-							<li><a href="#home" data-theme="b" data-icon="home" data-transition="slide" class="ui-btn-active">Home</a></li>
-						<li><a href="#additem" data-ajax="false" data-theme="b" data-icon="plus" data-transition="slide">New Item</a></li>
-						<li><a href="#rss" data-theme="b" data-icon="gear" data-transition="slide">RSS Feed</a></li>
-						<li><a href="#about" data-theme="b" data-icon="info" data-transition="slide">Info</a></li>
+							<li><a href="#home" data-theme="d" data-icon="home" data-transition="slide" class="ui-btn-active">Home</a></li>
+						<li><a href="#additem" data-ajax="false" data-theme="d" data-icon="plus" data-transition="slide">New Item</a></li>
+						<li><a href="#rss" data-theme="d" data-icon="gear" data-transition="slide">RSS Feed</a></li>
+						<li><a href="#about" data-theme="d" data-icon="info" data-transition="slide">Info</a></li>
 						</ul>
 					</div>
 				</div>
         </div>
     </div>
 
-	<div data-role="page" data-theme="b" id="planer">
-        <div data-role="header" data-theme="b">
+	<div data-role="page" data-theme="d" id="planer">
+        <div data-role="header" data-theme="d">
             <a href="#all" data-icon="back" data-rel="back">Back</a>
             <h3>13 in. Planer</h3>
         </div>
@@ -820,18 +824,18 @@
 			<div data-role="footer" data-position="fixed" data-id="home">
 					<div data-role="navbar" data-iconpos="top">
 						<ul>
-							<li><a href="#home" data-theme="b" data-icon="home" data-transition="slide" class="ui-btn-active">Home</a></li>
-						<li><a href="#additem" data-ajax="false" data-theme="b" data-icon="plus" data-transition="slide">New Item</a></li>
-						<li><a href="#rss" data-theme="b" data-icon="gear" data-transition="slide">RSS Feed</a></li>
-						<li><a href="#about" data-theme="b" data-icon="info" data-transition="slide">Info</a></li>
+							<li><a href="#home" data-theme="d" data-icon="home" data-transition="slide" class="ui-btn-active">Home</a></li>
+						<li><a href="#additem" data-ajax="false" data-theme="d" data-icon="plus" data-transition="slide">New Item</a></li>
+						<li><a href="#rss" data-theme="d" data-icon="gear" data-transition="slide">RSS Feed</a></li>
+						<li><a href="#about" data-theme="d" data-icon="info" data-transition="slide">Info</a></li>
 						</ul>
 					</div>
 				</div>
         </div>
     </div>
 
-	<div data-role="page" data-theme="b" id="dust">
-        <div data-role="header" data-theme="b">
+	<div data-role="page" data-theme="d" id="dust">
+        <div data-role="header" data-theme="d">
             <a href="#all" data-icon="back" data-rel="back">Back</a>
             <h3>Dust Collector</h3>
         </div>
@@ -860,18 +864,18 @@
 			<div data-role="footer" data-position="fixed" data-id="home">
 					<div data-role="navbar" data-iconpos="top">
 						<ul>
-							<li><a href="#home" data-theme="b" data-icon="home" data-transition="slide" class="ui-btn-active">Home</a></li>
-						<li><a href="#additem" data-ajax="false" data-theme="b" data-icon="plus" data-transition="slide">New Item</a></li>
-						<li><a href="#rss" data-theme="b" data-icon="gear" data-transition="slide">RSS Feed</a></li>
-						<li><a href="#about" data-theme="b" data-icon="info" data-transition="slide">Info</a></li>
+							<li><a href="#home" data-theme="d" data-icon="home" data-transition="slide" class="ui-btn-active">Home</a></li>
+						<li><a href="#additem" data-ajax="false" data-theme="d" data-icon="plus" data-transition="slide">New Item</a></li>
+						<li><a href="#rss" data-theme="d" data-icon="gear" data-transition="slide">RSS Feed</a></li>
+						<li><a href="#about" data-theme="d" data-icon="info" data-transition="slide">Info</a></li>
 						</ul>
 					</div>
 				</div>
         </div>
     </div>
 
-	<div data-role="page" data-theme="b" id="spax">
-        <div data-role="header" data-theme="b">
+	<div data-role="page" data-theme="d" id="spax">
+        <div data-role="header" data-theme="d">
             <a href="#all" data-icon="back" data-rel="back">Back</a>
             <h3>SPAX Screws</h3>
         </div>
@@ -899,18 +903,18 @@
             </div><div data-role="footer" data-position="fixed" data-id="home">
 					<div data-role="navbar" data-iconpos="top">
 						<ul>
-							<li><a href="#home" data-theme="b" data-icon="home" data-transition="slide" class="ui-btn-active">Home</a></li>
-						<li><a href="#additem" data-ajax="false" data-theme="b" data-icon="plus" data-transition="slide">New Item</a></li>
-						<li><a href="#rss" data-theme="b" data-icon="gear" data-transition="slide">RSS Feed</a></li>
-						<li><a href="#about" data-theme="b" data-icon="info" data-transition="slide">Info</a></li>
+							<li><a href="#home" data-theme="d" data-icon="home" data-transition="slide" class="ui-btn-active">Home</a></li>
+						<li><a href="#additem" data-ajax="false" data-theme="d" data-icon="plus" data-transition="slide">New Item</a></li>
+						<li><a href="#rss" data-theme="d" data-icon="gear" data-transition="slide">RSS Feed</a></li>
+						<li><a href="#about" data-theme="d" data-icon="info" data-transition="slide">Info</a></li>
 						</ul>
 					</div>
 				</div>
         </div>
     </div>
 
-	<div data-role="page" data-theme="b" id="bscrews">
-        <div data-role="header" data-theme="b">
+	<div data-role="page" data-theme="d" id="bscrews">
+        <div data-role="header" data-theme="d">
             <a href="#all" data-icon="back" data-rel="back">Back</a>
             <h3>#8 Black Screws</h3>
         </div>
@@ -939,18 +943,18 @@
 			<div data-role="footer" data-position="fixed" data-id="home">
 					<div data-role="navbar" data-iconpos="top">
 						<ul>
-							<li><a href="#home" data-theme="b" data-icon="home" data-transition="slide" class="ui-btn-active">Home</a></li>
-						<li><a href="#additem" data-ajax="false" data-theme="b" data-icon="plus" data-transition="slide">New Item</a></li>
-						<li><a href="#rss" data-theme="b" data-icon="gear" data-transition="slide">RSS Feed</a></li>
-						<li><a href="#about" data-theme="b" data-icon="info" data-transition="slide">Info</a></li>
+							<li><a href="#home" data-theme="d" data-icon="home" data-transition="slide" class="ui-btn-active">Home</a></li>
+						<li><a href="#additem" data-ajax="false" data-theme="d" data-icon="plus" data-transition="slide">New Item</a></li>
+						<li><a href="#rss" data-theme="d" data-icon="gear" data-transition="slide">RSS Feed</a></li>
+						<li><a href="#about" data-theme="d" data-icon="info" data-transition="slide">Info</a></li>
 						</ul>
 					</div>
 				</div>
         </div>
     </div>
 
-	<div data-role="page" data-theme="b" id="incrals">
-        <div data-role="header" data-theme="b">
+	<div data-role="page" data-theme="d" id="incrals">
+        <div data-role="header" data-theme="d">
             <a href="#all" data-icon="back" data-rel="back">Back</a>
             <h3>INCRA LS Positioner</h3>
         </div>
@@ -979,18 +983,18 @@
 			<div data-role="footer" data-position="fixed" data-id="home">
 					<div data-role="navbar" data-iconpos="top">
 						<ul>
-							<li><a href="#home" data-theme="b" data-icon="home" data-transition="slide" class="ui-btn-active">Home</a></li>
-						<li><a href="#additem" data-ajax="false" data-theme="b" data-icon="plus" data-transition="slide">New Item</a></li>
-						<li><a href="#rss" data-theme="b" data-icon="gear" data-transition="slide">RSS Feed</a></li>
-						<li><a href="#about" data-theme="b" data-icon="info" data-transition="slide">Info</a></li>
+							<li><a href="#home" data-theme="d" data-icon="home" data-transition="slide" class="ui-btn-active">Home</a></li>
+						<li><a href="#additem" data-ajax="false" data-theme="d" data-icon="plus" data-transition="slide">New Item</a></li>
+						<li><a href="#rss" data-theme="d" data-icon="gear" data-transition="slide">RSS Feed</a></li>
+						<li><a href="#about" data-theme="d" data-icon="info" data-transition="slide">Info</a></li>
 						</ul>
 					</div>
 				</div>
         </div>
     </div>
 
-	<div data-role="page" data-theme="b" id="oak">
-        <div data-role="header" data-theme="b">
+	<div data-role="page" data-theme="d" id="oak">
+        <div data-role="header" data-theme="d">
             <a href="#all" data-icon="back" data-rel="back">Back</a>
             <h3>Oak</h3>
         </div>
@@ -1019,18 +1023,18 @@
 			<div data-role="footer" data-position="fixed" data-id="home">
 					<div data-role="navbar" data-iconpos="top">
 						<ul>
-							<li><a href="#home" data-theme="b" data-icon="home" data-transition="slide" class="ui-btn-active">Home</a></li>
-						<li><a href="#additem" data-ajax="false" data-theme="b" data-icon="plus" data-transition="slide">New Item</a></li>
-						<li><a href="#rss" data-theme="b" data-icon="gear" data-transition="slide">RSS Feed</a></li>
-						<li><a href="#about" data-theme="b" data-icon="info" data-transition="slide">Info</a></li>
+							<li><a href="#home" data-theme="d" data-icon="home" data-transition="slide" class="ui-btn-active">Home</a></li>
+						<li><a href="#additem" data-ajax="false" data-theme="d" data-icon="plus" data-transition="slide">New Item</a></li>
+						<li><a href="#rss" data-theme="d" data-icon="gear" data-transition="slide">RSS Feed</a></li>
+						<li><a href="#about" data-theme="d" data-icon="info" data-transition="slide">Info</a></li>
 						</ul>
 					</div>
 				</div>
         </div>
     </div>
 
-	<div data-role="page" data-theme="b" id="qmaple">
-        <div data-role="header" data-theme="b">
+	<div data-role="page" data-theme="d" id="qmaple">
+        <div data-role="header" data-theme="d">
             <a href="#all" data-icon="back" data-rel="back">Back</a>
             <h3>Quilted Maple</h3>
         </div>
@@ -1059,18 +1063,18 @@
 			<div data-role="footer" data-position="fixed" data-id="home">
 					<div data-role="navbar" data-iconpos="top">
 						<ul>
-							<li><a href="#home" data-theme="b" data-icon="home" data-transition="slide" class="ui-btn-active">Home</a></li>
-						<li><a href="#additem" data-ajax="false" data-theme="b" data-icon="plus" data-transition="slide">New Item</a></li>
-						<li><a href="#rss" data-theme="b" data-icon="gear" data-transition="slide">RSS Feed</a></li>
-						<li><a href="#about" data-theme="b" data-icon="info" data-transition="slide">Info</a></li>
+							<li><a href="#home" data-theme="d" data-icon="home" data-transition="slide" class="ui-btn-active">Home</a></li>
+						<li><a href="#additem" data-ajax="false" data-theme="d" data-icon="plus" data-transition="slide">New Item</a></li>
+						<li><a href="#rss" data-theme="d" data-icon="gear" data-transition="slide">RSS Feed</a></li>
+						<li><a href="#about" data-theme="d" data-icon="info" data-transition="slide">Info</a></li>
 						</ul>
 					</div>
 				</div>
         </div>
     </div>
 
-	<div data-role="page" data-theme="b" id="bubinga">
-        <div data-role="header" data-theme="b">
+	<div data-role="page" data-theme="d" id="bubinga">
+        <div data-role="header" data-theme="d">
             <a href="#all" data-icon="back" data-rel="back">Back</a>
             <h3>Bubinga</h3>
         </div>
@@ -1099,32 +1103,32 @@
 			<div data-role="footer" data-position="fixed" data-id="home">
 					<div data-role="navbar" data-iconpos="top">
 						<ul>
-							<li><a href="#home" data-theme="b" data-icon="home" data-transition="slide" class="ui-btn-active">Home</a></li>
-						<li><a href="#additem" data-ajax="false" data-theme="b" data-icon="plus" data-transition="slide">New Item</a></li>
-						<li><a href="#rss" data-theme="b" data-icon="gear" data-transition="slide">RSS Feed</a></li>
-						<li><a href="#about" data-theme="b" data-icon="info" data-transition="slide">Info</a></li>
+							<li><a href="#home" data-theme="d" data-icon="home" data-transition="slide" class="ui-btn-active">Home</a></li>
+						<li><a href="#additem" data-ajax="false" data-theme="d" data-icon="plus" data-transition="slide">New Item</a></li>
+						<li><a href="#rss" data-theme="d" data-icon="gear" data-transition="slide">RSS Feed</a></li>
+						<li><a href="#about" data-theme="d" data-icon="info" data-transition="slide">Info</a></li>
 						</ul>
 					</div>
 				</div>
         </div>
     </div>
     
-	<div data-role="page" data-theme="b" id="about">
-        <div data-role="header" data-theme="b">
+	<div data-role="page" data-theme="d" id="about">
+        <div data-role="header" data-theme="d">
             <a href="#all" data-icon="back" data-rel="back">Back</a>
             <h3>About</h3>
         </div>
         <div data-role="content" style="padding: 15px">
-            <a data-role="button" data-mini="true" data-transition="fade" data-theme="b" href="https://github.com/rstrease/MiU.git">github Repository</a>
-            <a data-role="button" data-mini="true" data-transition="fade" data-theme="b" href="https://github.com/rstrease/MiU/blob/gh-pages/Week3/Gold%20App/index.html">github Live Link</a>
+            <a data-role="button" data-mini="true" data-transition="fade" data-theme="d" href="https://github.com/rstrease/MiU.git">github Repository</a>
+            <a data-role="button" data-mini="true" data-transition="fade" data-theme="d" href="https://github.com/rstrease/MiU/blob/gh-pages/Week3/Gold%20App/index.html">github Live Link</a>
         </div>
 <div data-role="footer" data-position="fixed" data-id="home">
 					<div data-role="navbar" data-iconpos="top">
 						<ul>
-							<li><a href="#home" data-theme="b" data-icon="home" data-transition="slide" class="ui-btn-active">Home</a></li>
-						<li><a href="#additem" data-ajax="false" data-theme="b" data-icon="plus" data-transition="slide">New Item</a></li>
-						<li><a href="#rss" data-theme="b" data-icon="gear" data-transition="slide">RSS Feed</a></li>
-						<li><a href="#about" data-theme="b" data-icon="info" data-transition="slide">Info</a></li>
+							<li><a href="#home" data-theme="d" data-icon="home" data-transition="slide" class="ui-btn-active">Home</a></li>
+						<li><a href="#additem" data-ajax="false" data-theme="d" data-icon="plus" data-transition="slide">New Item</a></li>
+						<li><a href="#rss" data-theme="d" data-icon="gear" data-transition="slide">RSS Feed</a></li>
+						<li><a href="#about" data-theme="d" data-icon="info" data-transition="slide">Info</a></li>
 						</ul>
 					</div>
 				</div>		
@@ -1132,8 +1136,8 @@
     
 	
 	
-    <div data-role="page" data-theme="b" id="rss">
-        <div data-role="header" data-theme="b">
+    <div data-role="page" data-theme="d" id="rss">
+        <div data-role="header" data-theme="d">
             <a href="#all" data-icon="back" data-rel="back">Back</a>
             <h3>RSS Feed</h3>
         </div>
@@ -1145,10 +1149,10 @@
 		<div data-role="footer" data-position="fixed" data-id="home">
 					<div data-role="navbar" data-iconpos="top">
 						<ul>
-							<li><a href="#home" data-theme="b" data-icon="home" data-transition="slide" class="ui-btn-active">Home</a></li>
-						<li><a href="#additem" data-ajax="false" data-theme="b" data-icon="plus" data-transition="slide">New Item</a></li>
-						<li><a href="#rss" data-theme="b" data-icon="gear" data-transition="slide">RSS Feed</a></li>
-						<li><a href="#about" data-theme="b" data-icon="info" data-transition="slide">Info</a></li>
+							<li><a href="#home" data-theme="d" data-icon="home" data-transition="slide" class="ui-btn-active">Home</a></li>
+						<li><a href="#additem" data-ajax="false" data-theme="d" data-icon="plus" data-transition="slide">New Item</a></li>
+						<li><a href="#rss" data-theme="d" data-icon="gear" data-transition="slide">RSS Feed</a></li>
+						<li><a href="#about" data-theme="d" data-icon="info" data-transition="slide">Info</a></li>
 						</ul>
 					</div>
 				</div>
