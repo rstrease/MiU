@@ -2,12 +2,12 @@
 	list-style-type: none;
 	}
 
-/*#subUl{
+#subUl{
 	list-style-type: none;
 	margin-top: 15px;
 	margin: 15px;
 	padding: 15px;
-}*/
+}
 
 #subUl li{
 	list-style-type: none;
@@ -17,20 +17,11 @@
 	text-align: center;
 	list-style-type: none;
 }
-
-#errors {
-	color: red;
-	list-style-type: none;
-}
 	
 label.error{
 	display:block;
 	margin: 10px 0;
 	color: red;
-}
-	
-#tferrorslink {
-	display:none;
 }
 
 .ui-li-has-thumb .ui-btn-inner a.ui-link-inherit, .ui-li-static.ui-li-has-thumb {
@@ -41,10 +32,10 @@ label.error{
 .ui-li-thumb, .ui-listview .ui-li-icon, .ui-li-content {
     float: left;
     margin-right: 10px;
-	margin-top: 8px;
+	margin-top: 12px;
 	margin-left: 15px;
 }
 
-#tferrorsLink{
-	display: none;
+#edbutton{
+	margin-right: 10px;
 }
