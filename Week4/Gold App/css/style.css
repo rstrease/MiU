@@ -39,3 +39,18 @@ label.error{
 #edbutton{
 	margin-right: 10px;
 }
+
+#subUl {
+    background-color: white;
+    border: 0.1em solid #CACACA;
+    border-radius: 10px 10px 10px 10px;
+    list-style-type: none;
+    margin: 15px;
+	-webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+#pics{
+margin-left: 15px;
+border-radius: 10px;
+-webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
+}
