@@ -69,15 +69,16 @@
  
 	<div data-role="page" data-theme="b" id="additem">
 		<div data-position="fixed" data-role="header" data-theme="b">
-		<a href="#home" data-icon="back" data-rel="back">Back</a>
+			<a href="#home" data-icon="back" data-rel="back">Back</a>
 			<h3>New Item</h3>
+			<input id="reset" data-icon="delete" data-mini="true" class="ui-btn-right" data-iconpos="right" data-theme="c" type="reset" value="Reset"/>
 		</div>
 
 		<div data-role="content" style="padding: 15px">
 			
-                <div id="display">
-                    <a href="#display" data-theme="b" data-iconpos="left" data-role="button" data-transition="slide">Display Data</a>
-                </div>
+            <div id="display">
+                <a href="#display" data-theme="b" data-mini="true" data-role="button" data-transition="slide">Display Data</a>
+            </div>
 							
 			<div id="inputs">
 				<form action="#display" id="toolForm" method="post">
@@ -181,8 +182,7 @@
 					</div>
 
 					<div data-role="fieldcontain">
-						<input id="submit" data-icon="plus" data-iconpos="left" data-theme="b" type="submit" value="Add Item To List"/>
-						<input id="reset" data-icon="delete" data-iconpos="left" data-theme="c" type="reset" value="Reset Form"/> 
+						<input id="submit" data-icon="plus" data-iconpos="left" data-theme="b" type="submit" value="Add Item To List"/> 
 					</div>
 					
 				</form>
@@ -210,10 +210,10 @@
         <div data-role="content" style="padding: 15px">
 			<div class="ui-grid-a">
                 	<div class="ui-block-a" id="clear">
-                    	<a href="#" data-theme="b" data-icon="delete" data-iconpos="left" data-role="button" data-transition="slide">Clear Data</a>
+                    	<a href="#" data-theme="b" data-mini="true" data-icon="delete" data-iconpos="left" data-role="button" data-transition="slide">Clear Data</a>
                     </div>
                     <div class="ui-block-b"  id="addnew">
-                    	<a href="#additem" data-theme="b" data-icon="plus" data-iconpos="left" data-role="button" data-transition="slide">New Item</a>
+                    	<a href="#additem" data-theme="b" data-mini="true" data-icon="plus" data-iconpos="left" data-role="button" data-transition="slide">New Item</a>
                     </div>
                 </div> 
         </div>
