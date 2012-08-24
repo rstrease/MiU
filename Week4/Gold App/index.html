@@ -32,7 +32,7 @@
         </div>
         <div data-role="content" style="padding: 15px">
             <div style="width: 100%; height: 200px; position: relative; background-color: #fbfbfb; border-radius: 8px; border: 1px solid #b8b8b8; -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, .3); box-shadow: 0 1px 4px rgba(0, 0, 0, .3); text-align: center;">
-            <p align="center">Keep an inventory of your tools and accessories with you at all times.</p>
+            <p align="center" style="padding-left: 15px; padding-right: 15px;">Keep an inventory of your tools and accessories with you at all times.</p>
             <img src="images/tools.png" alt="image" width="245px"/>
 				<div id="additemlink" style="margin-top: 15px; margin-left: 25px; margin-right: 25px;">
 					<a href="#additem" id="button" data-theme="b" data-role="button" data-transition="slide">Click to Add A Tool</a>
@@ -75,10 +75,14 @@
 		</div>
 
 		<div data-role="content" style="padding: 15px">
-			
-            <div id="display">
-                <a href="#displayitem" data-theme="b" data-role="button" data-transition="slide">Display Data</a>
-            </div>
+			<div style="width: 100%; height: 200px; position: relative; background-color: #fbfbfb; border-radius: 8px; border: 1px solid #b8b8b8; -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, .3); box-shadow: 0 1px 4px rgba(0, 0, 0, .3); text-align: center;">
+            	<p align="center" style="padding-left: 15px; padding-right: 15px;">Fill out and submit to store tool. Hit the display data button for results.</p>
+            	<img src="images/tools.png" alt="image" width="245px"/>
+				<div id="display" style="margin-top: 15px; margin-left: 25px; margin-right: 25px;">
+                	<a href="#displayitem" data-theme="b" data-role="button" data-transition="slide">Display Data</a>
+            	</div>
+			</div>
+            
 							
 			<div id="inputs">
 				<form action="#displayitem" id="toolForm" method="post">
